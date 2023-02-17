@@ -6,7 +6,6 @@ let itemSchema = new mongoose.Schema(
     {
         itemId:{type: Number},
         itemName:{type: String},
-        itemPrice:{type: Number},
         tags:[{
             type:String
         }]
