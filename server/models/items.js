@@ -4,7 +4,7 @@ const mongoose = require(`mongoose`)
 
 let itemSchema = new mongoose.Schema(
     {
-        itemId:{type: Number},
+        itemId:{type: String},
         itemName:{type: String, match:/^[a-zA-Z0-9',. -]+$/},
         tags:[{
             type:String, match:/^[a-zA-Z0-9',. -]+$/
