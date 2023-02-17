@@ -5,7 +5,6 @@ const mongoose = require(`mongoose`)
 let itemSchema = new mongoose.Schema(
     {
         itemId:{type: Number},
-        itemName:{type: String},
         tags:[{
             type:String
         }]
