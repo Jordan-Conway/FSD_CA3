@@ -10,7 +10,7 @@ let purchaseSchema = new mongoose.Schema(
         purchaseStatus:{type:String, enum:['paid', "dispatched", "arrived", "cancelled"]},
         items: [
             [{
-                item:{Item}, 
+                itemId:{type: String}, 
                 itemPrice:{type: Number, match:/^\d+$/}, 
                 quantity:{type:Number, match:/^\d+$/}
             }]
