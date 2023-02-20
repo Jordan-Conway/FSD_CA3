@@ -8,10 +8,7 @@ let itemSchema = new mongoose.Schema(
         itemName:{type: String, match:/^[a-zA-Z0-9',. -]+$/},
         tags:[{
             type:String, match:/^[a-zA-Z0-9',. -]+$/
-        }],
-        itemImages:[
-            {type:String, default:""}
-        ] 
+        }]
     }
 )
 
