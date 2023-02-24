@@ -12,6 +12,12 @@ let shippingAddressSchema = new mongoose.Schema(
     }
 )
 
+let purchaseSchema = new mongoose.Schema(
+    {
+        purchaseId:{type: String}
+    }
+)
+
 let userSchema = new mongoose.Schema(
     {
         username:{type: String},
@@ -20,9 +26,7 @@ let userSchema = new mongoose.Schema(
         dateJoined:{type: Date},
         shippingAddress:[shippingAddressSchema],
         phoneNumber:{type: Number},
-        purchaseIds: [{
-            type: String
-        }],
+        purchaseIds:[purchaseSchema],
         profilePhotoFilename: {type:String, default:""}
     }
 )
