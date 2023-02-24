@@ -28,6 +28,9 @@ let userSchema = new mongoose.Schema(
         phoneNumber:{type: Number},
         purchaseIds:[purchaseSchema],
         profilePhotoFilename: {type:String, default:""}
+    },
+    {
+        collection: `users`
     }
 )
 

@@ -13,6 +13,9 @@ let listingSchema = new mongoose.Schema(
         price:{type:Number, match:/^\d+$/},
         quantity:{type:Number, match:/^\d+$/},
         itemImages:[itemImagesSchema]
+    },
+    {
+        collection: `carParts`
     }
 )
 
