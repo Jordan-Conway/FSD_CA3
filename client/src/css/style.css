@@ -65,4 +65,12 @@ footer {
   background-color: rgb(8, 8, 49);
   color: white;
   text-align: center;
+}
+
+.userDetails {
+  display: flex;
+}
+
+.userDetails div {
+  flex-grow: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -78,5 +78,13 @@ nav{
     text-align: center;
   }
 
+  .userDetails{
+    display: flex;
+  }
+
+  .userDetails div{
+    flex-grow: 1;
+  }
+
   
 
