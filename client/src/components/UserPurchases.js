@@ -6,7 +6,7 @@ export default class UserPurchases extends Component
     {
         return(
             <div className="userPurchases">
-                
+                <p>Purchases go here</p>
             </div>
         )
     }

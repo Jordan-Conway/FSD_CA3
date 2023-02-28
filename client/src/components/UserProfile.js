@@ -6,7 +6,7 @@ export default class UserProfile extends Component
     {
         return(
             <div className="userProfile">
-                
+                <p>User profile goes here</p>
             </div>
         )
     }
