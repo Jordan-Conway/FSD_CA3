@@ -46,12 +46,8 @@ export default class DisplayAllCars extends Component
         return (           
             <div className="form-container">
                 <div className="table-container">
-<<<<<<< HEAD
                     <UserProfile/>
-                    <CarTable cars={this.state.cars} /> 
-=======
                     <CarTable cars={this.state.carParts} /> 
->>>>>>> b2d6bbf50e9ca400b8d05df16ba20f4ea6c8fccc
                 </div>
             </div> 
         )
