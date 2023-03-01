@@ -10,3 +10,5 @@ router.get(`/cars`, (req, res) =>
             
     })
 })
+
+module.exports = router
