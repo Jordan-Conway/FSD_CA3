@@ -1,6 +1,8 @@
 // Server-side global variables
 require(`dotenv`).config({path:`./config/.env`})
 
+// Database
+require(`./config/db`)
 
 // Express
 const express = require(`express`)
@@ -10,6 +12,8 @@ const app = express()
 app.use(require(`body-parser`).json())
 app.use(require(`cors`)({credentials: true, origin: process.env.LOCAL_HOST}))
 
+// Routes
+app.use(require(`./routes/carParts.js`))
 
 // Port
 app.listen(process.env.SERVER_PORT, () => 
@@ -17,6 +21,7 @@ app.listen(process.env.SERVER_PORT, () =>
     console.log(`Connected to port ` + process.env.SERVER_PORT)
 })
 
+require(`./config/db`)
 
 // Error 404
 app.use((req, res, next) => {next(createError(404))})
