@@ -10,15 +10,17 @@ export default class CarTable extends Component
             <table>
                 <thead>
                     <tr>
-                        <th>Model</th>
+                        <th>Item Name</th>
+                        <th>Item Number</th>
+                        <th>Material</th>
                         <th>Colour</th>
-                        <th>Year</th>
                         <th>Price</th>
+                        <th>Condition</th>
                     </tr>
                 </thead>
                   
                 <tbody>
-                    {this.props.cars.map((car) => <CarTableRow key={car._id} car={car}/>)}
+                    {this.props.cars.map((part) => <CarTableRow key={part._id} part={part}/>)}
                 </tbody>
             </table>      
         )
