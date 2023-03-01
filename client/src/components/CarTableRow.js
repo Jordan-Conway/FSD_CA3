@@ -7,10 +7,12 @@ export default class CarTableRow extends Component
     {
         return (
             <tr>
-                <td>{this.props.car.model}</td>
-                <td>{this.props.car.colour}</td>
-                <td>{this.props.car.year}</td>
-                <td>{this.props.car.price}</td>
+                <td>{this.props.part.name}</td>
+                <td>{this.props.part.item_number}</td>
+                <td>{this.props.part.material}</td>
+                <td>{this.props.part.color}</td>
+                <td>{this.props.part.price}</td>
+                <td>{this.props.part.condition}</td>
             </tr>
         )
     }
