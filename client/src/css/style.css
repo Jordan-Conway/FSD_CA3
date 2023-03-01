@@ -67,10 +67,10 @@ footer {
   text-align: center;
 }
 
-.userDetails {
+.userProfile {
   display: flex;
+  flex-direction: row;
 }
-
-.userDetails div {
+.userProfile div {
   flex-grow: 1;
 }/*# sourceMappingURL=style.css.map */

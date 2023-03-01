@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 
 import CarTable from "./CarTable"
+import UserProfile from "./UserProfile"
+import '../css/style.css'
 
 export default class DisplayAllCars extends Component 
 {
@@ -33,6 +35,7 @@ export default class DisplayAllCars extends Component
         return (           
             <div className="form-container">
                 <div className="table-container">
+                    <UserProfile/>
                     <CarTable cars={this.state.cars} /> 
                 </div>
             </div> 

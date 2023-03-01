@@ -1,90 +1,89 @@
-
-
-nav{
+nav {
   left: 0;
   overflow: hidden;
-  background-color:rgb(8, 8, 49);
-  position:fixed;
-  padding-top:20px;
-  top:0;
-  width:100%;
-  
-  ul{
-    text-align:center;
-    margin:0;
-    padding:15px;
+  background-color: rgb(8, 8, 49);
+  position: fixed;
+  padding-top: 20px;
+  top: 0;
+  width: 100%;
 
-    button.searchbutton{
-      
+  ul {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+
+    button.searchbutton {
+
       background-color: rgb(243, 100, 4);
-      color:white;
-      padding:5px;
-      
+      color: white;
+      padding: 5px;
+
 
     }
-  li{
-    display:inline;
-    font-family: sans-serif;
-    font-size:20px;
-    color:rgb(235, 118, 23);
-    
-    button{
+
+    li {
+      display: inline;
+      font-family: sans-serif;
+      font-size: 20px;
+      color: rgb(235, 118, 23);
+
+      button {
         background-color: red;
       }
-    a{
-      color:white;
-      text-decoration:none;
-      padding:15px;
 
-      
-    &:hover{
-      color:rgb(235, 118, 8);
-          }
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+
+
+        &:hover {
+          color: rgb(235, 118, 8);
         }
       }
     }
   }
+}
 
-  .sidebar {
-    height: 100%;
-    width: 25%;
-    margin-top:70px;
-    left: 0;
-    background-color: #fdfdfd;
-    padding-top:40px;
-    a{
-      padding-top: 6px;
-      padding-left: 8px; 
-      padding-right:6px;
-      padding-bottom:16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #000000;
-      display: block;
-      
-    &:hover{
-      color:rgb(235, 118, 8);
-      }
+.sidebar {
+  height: 100%;
+  width: 25%;
+  margin-top: 70px;
+  left: 0;
+  background-color: #fdfdfd;
+  padding-top: 40px;
+
+  a {
+    padding-top: 6px;
+    padding-left: 8px;
+    padding-right: 6px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+
+    &:hover {
+      color: rgb(235, 118, 8);
     }
   }
+}
 
-  footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:rgb(8, 8, 49);
-    color: white;
-    text-align: center;
-  }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(8, 8, 49);
+  color: white;
+  text-align: center;
+}
 
-  .userDetails{
-    display: flex;
-  }
+.userProfile {
+  display: flex;
+  flex-direction: row;
 
-  .userDetails div{
+  div{
     flex-grow: 1;
   }
-
-  
-
+}

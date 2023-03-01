@@ -1,4 +1,7 @@
 import React, {Component} from "react"
+import UserDetails from "./UserDetails"
+import UserPurchases from "./UserPurchases"
+import BuyAgain from "./BuyAgain"
 
 export default class UserProfile extends Component
 {
@@ -6,7 +9,9 @@ export default class UserProfile extends Component
     {
         return(
             <div className="userProfile">
-                <p>User profile goes here</p>
+                <UserDetails/>
+                <UserPurchases/>
+                <BuyAgain/>
             </div>
         )
     }
