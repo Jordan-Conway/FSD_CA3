@@ -1,5 +1,6 @@
 import React, {Component} from "react"
-import UserDetails from "./userDetails"
+
+import UserDetails from "./UserDetails"
 import UserPurchases from "./UserPurchases"
 import BuyAgain from "./BuyAgain"
 

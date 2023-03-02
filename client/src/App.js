@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {BrowserRouter, Switch, Route} from "react-router-dom"
+import {BrowserRouter, Switch, Route} from "react-router-dom"
 
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/style.css"
@@ -12,6 +13,13 @@ import Login from "./components/Login"
 import Logout from "./components/Logout"
 
 
+// import Register from "./components/Register"
+// import ResetDatabase from "./components/ResetDatabase"
+// import Login from "./components/Login"
+// import Logout from "./components/Logout"
+// import AddCar from "./components/AddCar"
+// import EditCar from "./components/EditCar"
+// import DeleteCar from "./components/DeleteCar"
 import DisplayAllCars from "./components/DisplayAllCars"
 import LoggedInRoute from "./components/LoggedInRoute"
 

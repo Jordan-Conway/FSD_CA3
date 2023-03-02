@@ -1,20 +1,6 @@
 import React, {Component} from "react"
-import {Link} from "react-router-dom"
-
-import axios from "axios"
 
 import CarTable from "./CarTable"
-
-import UserProfile from "./UserProfile"
-import '../css/style.css'
-import Navbar from "./Navbar"
-import {SERVER_HOST} from "../config/global_constants"
-
-
-
-
-
-
 
 export default class DisplayAllCars extends Component 
 {
@@ -60,16 +46,9 @@ export default class DisplayAllCars extends Component
 
             <div className="form-container">
                 <div className="table-container">
-                    <CarTable cars={this.state.carParts} /> 
-                        
-                    
-                        <div className="add-new-car">
-                            <Link className="blue-button" to={"/AddCar"}>Add New Car</Link>
-                        </div>
-                    
+                    <CarTable cars={this.state.cars} /> 
                 </div>
             </div> 
-            </div>
         )
     }
 }
