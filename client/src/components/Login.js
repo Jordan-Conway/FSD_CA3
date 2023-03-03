@@ -61,9 +61,9 @@ export default class Login extends Component
                 <h2>Login</h2>
 
                 
-                
+              
                 {this.state.isLoggedIn ? <Redirect to="/DisplayAllCars"/> : null} 
-                
+                <div className="loginContainer">
                 <input 
                     type = "email" 
                     name = "email" 
@@ -82,9 +82,13 @@ export default class Login extends Component
                     onChange={this.handleChange}
                 /><br/><br/>
                 
-                <LinkInClass value="Login" className="green-button" onClick={this.handleSubmit}/> 
-                <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>                                      
+                <LinkInClass value="Login" className="login-button" onClick={this.handleSubmit}/> 
+                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
+                </div>                                   
             </form>
+
+            
+             
         )
     }
 }

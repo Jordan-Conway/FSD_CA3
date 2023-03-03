@@ -11,26 +11,77 @@ body{
  
 }
 
-
-
-
-
-
-.searchfrom{
-  margin-left:20px;
-  padding-right:100px;
-  margin-bottom:5px;
+.form-container{
+  background-color:#6290C8;
+  text-align: center;
+  margin-top:50px;
+  h2{
+    color:white;
+     background-color:rgb(8, 8, 49);
+  }
+  
+  .loginContainer{
+    padding-top:20px;
+    background-color:#E7E5DF;
+  }
+  span.login-button{
+    background-color:#6290C8;
+     color:white;
+    padding:10px;
+      &:hover{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+        }
+  }
+  a.cancel-button{
+    background-color:#6290C8;
+    color:rgb(231, 229, 229);
+    padding:10px;
+      &:hover{
+    color:rgb(19, 19, 19);
+    text-decoration:none;
+        }
+  }
 }
-button.searchbutton{
-  background-color: rgb(243, 100, 4);
-  border-radius:5px;
-  color:white;
-  padding:2px;
+
+a.green-button, a.blue-button{
+  padding-left:10px;
+
+  color: white;
+  font-size:20px;
 
   &:hover{
-    background-color:rgb(255, 255, 255);
-    color: rgb(4, 1, 39);
-  }
+    color:rgb(235, 118, 8);
+    text-decoration:none;
+        }
+      }
+  
+
+div#navbarBottom{
+  background-color:#6290C8;
+  border: 1px solid #868686;
+  li{
+    display:inline;
+    font-family: sans-serif;
+    font-size:20px;
+    color:rgb(235, 118, 23);
+  
+    
+
+  a{
+    color:rgb(245, 245, 245);
+    text-decoration:none;
+    padding:15px;
+   
+
+    
+  &:hover{
+    color:rgb(12, 12, 12);
+    
+        }
+      }
+    }
+
 }
 
 div#navbarTop{
@@ -55,35 +106,18 @@ div#navbarTop{
       
 
     }
-  li{
-    display:inline;
-    font-family: sans-serif;
-    font-size:20px;
-    color:rgb(235, 118, 23);
-    
-    button{
-        background-color: red;
-      }
-    a{
-      color:white;
-      text-decoration:none;
-      padding:15px;
-
-      
-    &:hover{
-      color:rgb(235, 118, 8);
-          }
-        }
-      }
     }
   }
 
-  .sidebar {
+  .sidenav {
+    color:rgb(8, 8, 49);
+    
     height: 100%;
-    width: 25%;
-    margin-top:70px;
+    width: 20%;
+    margin-top:200px;
     left: 0;
-    background-color: #fdfdfd;
+    background-color:#ececea;
+    border: 1px solid #d6d6d6;
     padding-top:40px;
     a{
       padding-top: 6px;
@@ -93,16 +127,20 @@ div#navbarTop{
       text-decoration: none;
       font-size: 25px;
       color: #000000;
-      display: block;
       
+      display: block;
+
     &:hover{
-      color:rgb(235, 118, 8);
+      color:rgb(255, 255, 255);
+      background-color:#6290C8;
+      text-decoration:none;
       }
     }
   }
 
   footer{
-    position: fixed;
+   position: absolute;
+   
     left: 0;
     bottom: 0;
     width: 100%;
@@ -111,5 +149,5 @@ div#navbarTop{
     text-align: center;
   }
 
-  
+ 
 

@@ -76,10 +76,10 @@ export default class Register extends Component
     {     
         return (
             <form className="form-container" noValidate = {true} id = "loginOrRegistrationForm">
-           
+             <h2>New User Registration</h2>
                 {this.state.isRegistered ? <Redirect to="/DisplayAllCars"/> : null} 
-            
-                <h2>New User Registration</h2>
+                <div className="loginContainer">
+              
            
                 <input  
                     name = "name"              
@@ -124,8 +124,9 @@ export default class Register extends Component
                     onChange = {this.handleFileChange}
                 /><br/><br/>
                 
-                <LinkInClass value="Register New User" className="green-button" onClick={this.handleSubmit} />
-                <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>   
+                <LinkInClass value="Register New User" className="login-button" onClick={this.handleSubmit} />
+                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
+                </div>
             </form>
         )
     }

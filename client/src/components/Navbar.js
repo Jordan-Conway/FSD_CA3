@@ -5,7 +5,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <div id="navbarTop">
-        <div class="brandName">DealsOnWheels</div>
+        <div className="brandName">DealsOnWheels</div>
         {/* <input class="searchfrom" type="search" placeholder="Search" aria-label="Search">
             <button class="searchbutton" type="submit">Search</button>
 
@@ -24,7 +24,7 @@ export default class Navbar extends Component {
 
         <div id="navbarBottom">
           <nav>
-            <div class="navLinks">
+            <div className="navLinks">
               <ul>
                 <li>
                   <a href="#">Home</a>
