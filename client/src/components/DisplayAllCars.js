@@ -22,9 +22,11 @@ export default class DisplayAllCars extends Component
     
    
     componentDidMount() 
-    {
-        axios.get(`${SERVER_HOST}/carParts`)
+    {  console.log("cOMPONANT");
+        axios.get(`${SERVER_HOST}/cars`)
+
             .then(res => {
+              
                 if (res.data) {
                     if (res.data.errorMessage) {
                         console.log(res.data.errorMessage)
