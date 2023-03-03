@@ -6,7 +6,7 @@ export default class UserDetails extends Component
     {
         return(
             <div className="userDetails">
-                <p>User details go here</p>
+                <img src={localStorage.userProfilePicture} />
             </div>
         )
     }

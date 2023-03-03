@@ -12,6 +12,7 @@ import "./css/App.css"
 // import EditCar from "./components/EditCar"
 // import DeleteCar from "./components/DeleteCar"
 import DisplayAllCars from "./components/DisplayAllCars"
+import UserProfile from "./components/UserProfile"
 // import LoggedInRoute from "./components/LoggedInRoute"
 
 
@@ -42,6 +43,7 @@ export default class App extends Component
                     <LoggedInRoute exact path="/AddCar" component={AddCar} />
                     <LoggedInRoute exact path="/EditCar/:id" component={EditCar} />
                     <LoggedInRoute exact path="/DeleteCar/:id" component={DeleteCar} /> */}
+                    <Route exact path="/UserProfile" component={UserProfile}/>
                     <Route exact path="/DisplayAllCars" component={DisplayAllCars}/> 
                     <Route path="*" component={DisplayAllCars}/>                            
                 </Switch>
