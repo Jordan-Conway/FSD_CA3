@@ -16,4 +16,10 @@ router.post(`/carParts`, (req, res) => {
 
 })
 
+router.put(`/carParts/:id`, (req, res) => {
+    carPartsSchema.findByIdAndUpdate(req.params.id, { $set: req.body }, (error, data) => {
+        res.json(data)
+    })
+})
+
 module.exports = router
