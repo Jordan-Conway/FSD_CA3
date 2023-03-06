@@ -27,7 +27,9 @@ export default class Navbar extends Component {
             <div className="navLinks">
               <ul>
                 <li>
-                  <a href="#">Home</a>
+             
+                  <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
+                  
                 </li>
                 <li>
                   <a href="#">All Parts</a>
@@ -39,8 +41,10 @@ export default class Navbar extends Component {
                   <a href="#">New</a>
                 </li>
                 <li>
-                  <a href="#">Mods</a>
-                </li>
+
+                <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+           
+                </li>    
               </ul>
             </div>
           </nav>
