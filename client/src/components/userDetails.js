@@ -6,7 +6,9 @@ export default class UserDetails extends Component
     {
         return(
             <div className="userDetails">
-                <img src={localStorage.userProfilePicture} />
+                <img className="userProfilePicture" alt="profile" src={localStorage.userProfilePicture} />
+                <p>{localStorage.username === undefined ? "Username is undefined" : localStorage.username}</p>
+                <p>{localStorage.joinDate === undefined ? "Join date is undefined" : localStorage.username}</p>
             </div>
         )
     }
