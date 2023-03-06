@@ -8,11 +8,11 @@ import "./css/App.css"
 // import ResetDatabase from "./components/ResetDatabase"
 // import Login from "./components/Login"
 // import Logout from "./components/Logout"
-// import AddCar from "./components/AddCar"
-// import EditCar from "./components/EditCar"
-// import DeleteCar from "./components/DeleteCar"
+import EditCarPart from "./components/EditCarPart"
+import DeleteCarPart from "./components/DeleteCarPart"
 import DisplayAllCars from "./components/DisplayAllCars"
 import UserProfile from "./components/UserProfile"
+import AddCarPart from "./components/AddCarPart"
 // import LoggedInRoute from "./components/LoggedInRoute"
 
 
@@ -39,10 +39,10 @@ export default class App extends Component
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     <Route exact path="/" component={DisplayAllCars} />
                     {/* <Route exact path="/Login" component={Login} />
-                    <LoggedInRoute exact path="/Logout" component={Logout} />
-                    <LoggedInRoute exact path="/AddCar" component={AddCar} />
-                    <LoggedInRoute exact path="/EditCar/:id" component={EditCar} />
-                    <LoggedInRoute exact path="/DeleteCar/:id" component={DeleteCar} /> */}
+                    <LoggedInRoute exact path="/Logout" component={Logout} /> */}
+                    <Route exact path="/AddCarPart" component={AddCarPart} />
+                    <Route exact path="/EditCarPart/:id" component={EditCarPart} />
+                    <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
                     <Route exact path="/DisplayAllCars" component={DisplayAllCars}/> 
                     <Route path="*" component={DisplayAllCars}/>                            
