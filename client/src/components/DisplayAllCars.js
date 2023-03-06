@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import axios from "axios"
 import {SERVER_HOST} from "../config/global_constants"  
@@ -47,6 +47,9 @@ export default class DisplayAllCars extends Component
                 <div className="table-container">
                     <CarTable cars={this.state.carParts} /> 
                 </div>
+                <div className="add-new-car">
+                                <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+                            </div>
             </div> 
         )
     }
