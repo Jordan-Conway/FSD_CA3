@@ -15,6 +15,7 @@ export default class CarTableRow extends Component
                 <td>{this.props.part.price}</td>
                 <td>{this.props.part.condition}</td>
                 <td><Link className="green-button" to={"/EditCarPart/" + this.props.part._id}>Edit</Link></td>
+                <td><Link className="red-button" to={"/DeleteCarPart/" + this.props.part._id}>Delete</Link></td>
             </tr>
         )
     }

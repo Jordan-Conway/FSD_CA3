@@ -22,4 +22,10 @@ router.put(`/carParts/:id`, (req, res) => {
     })
 })
 
+router.delete(`/carParts/:id`, (req, res) => {
+     carPartsSchema.findByIdAndRemove(req.params.id, (error, data) => {
+        res.json(data)
+    })
+})
+
 module.exports = router
