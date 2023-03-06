@@ -11,22 +11,51 @@ body {
   font-family: "Fantasy";
 }
 
-
-.searchfrom {
-  margin-left: 20px;
-  padding-right: 100px;
-  margin-bottom: 5px;
+.form-container {
+  background-color: #6290C8;
+  text-align: center;
+  margin-top: 50px;
+}
+.form-container h2 {
+  color: white;
+  background-color: rgb(8, 8, 49);
+}
+.form-container .loginContainer {
+  padding-top: 20px;
+  background-color: #E7E5DF;
+}
+.form-container span.login-button {
+  background-color: #6290C8;
+  color: white;
+  padding: 10px;
+}
+.form-container span.login-button:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.form-container a.cancel-button {
+  background-color: #6290C8;
+  color: rgb(231, 229, 229);
+  padding: 10px;
+}
+.form-container a.cancel-button:hover {
+  color: rgb(19, 19, 19);
+  text-decoration: none;
 }
 
-button.searchbutton {
-  background-color: rgb(243, 100, 4);
-  border-radius: 5px;
+a.green-button, a.blue-button {
+  padding-left: 10px;
   color: white;
-  padding: 2px;
+  font-size: 20px;
+}
+a.green-button:hover, a.blue-button:hover {
+  color: rgb(235, 118, 8);
+  text-decoration: none;
 }
 
 div#navbarBottom {
-  background-color: rgb(20, 20, 49);
+  background-color: #6290C8;
+  border: 1px solid #868686;
 }
 div#navbarBottom li {
   display: inline;
@@ -35,13 +64,12 @@ div#navbarBottom li {
   color: rgb(235, 118, 23);
 }
 div#navbarBottom li a {
-  color: white;
+  color: rgb(245, 245, 245);
   text-decoration: none;
   padding: 15px;
 }
 div#navbarBottom li a:hover {
-  color: rgb(235, 118, 8);
-  background-color: rgb(8, 8, 49);
+  color: rgb(12, 12, 12);
 }
 
 div#navbarTop {
@@ -65,28 +93,33 @@ div#navbarTop ul button.searchbutton {
 }
 
 .sidenav {
+  color: rgb(8, 8, 49);
   height: 100%;
-  width: 25%;
+  width: 20%;
   margin-top: 200px;
   left: 0;
-  background-color: #bebbbb;
+  background-color: #ececea;
+  border: 1px solid #d6d6d6;
   padding-top: 40px;
 }
 .sidenav a {
+  padding-top: 6px;
   padding-left: 8px;
+  padding-right: 6px;
   padding-bottom: 16px;
   text-decoration: none;
-  font-size: 20px;
-  color: black;
-  display: inline-flex;
+  font-size: 25px;
+  color: #000000;
+  display: block;
 }
 .sidenav a:hover {
-  color: rgb(235, 118, 8);
+  color: rgb(255, 255, 255);
+  background-color: #6290C8;
   text-decoration: none;
 }
 
 footer {
-  position:absolute;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
