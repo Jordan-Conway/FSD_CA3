@@ -119,12 +119,13 @@ export default class Register extends Component
                     onChange = {this.handleChange}
                 /><br/>
                 
-                <input            
+                <input    
+                    name = "profilePhoto"           
                     type = "file"                    
                     onChange = {this.handleFileChange}
                 /><br/><br/>
                 
-                <LinkInClass value="Register New User" className="login-button" onClick={this.handleSubmit} />
+                <Link className="login-button" to={this.handleSubmit}>Register</Link>
                 <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
                 </div>
             </form>

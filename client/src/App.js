@@ -4,29 +4,30 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/style.css"
 
+import Register from "./components/Register"
 import Navbar from "./components/Navbar"
 import Sidenav from "./components/SideNav"
-import Register from "./components/Register"
 import EditCarPart from "./components/EditCarPart"
 import DeleteCarPart from "./components/DeleteCarPart"
 import UserProfile from "./components/UserProfile"
 import AddCarPart from "./components/AddCarPart"
 // import ResetDatabase from "./components/ResetDatabase"
 import Login from "./components/Login"
-// import Logout from "./components/Logout"
+import Logout from "./components/Logout"
 
 import DisplayAllCars from "./components/DisplayAllCars"
-// import LoggedInRoute from "./components/LoggedInRoute"
+import LoggedInRoute from "./components/LoggedInRoute"
 
 
-// import {ACCESS_LEVEL_GUEST} from "./config/global_constants"
-// if (typeof localStorage.accessLevel === "undefined")
-// {
-//     localStorage.name = "GUEST"
-//     localStorage.accessLevel = ACCESS_LEVEL_GUEST
-//     localStorage.token = null
-//     localStorage.profilePhoto = null
-// }
+import {ACCESS_LEVEL_GUEST} from "./config/global_constants"
+
+if (typeof localStorage.accessLevel === "undefined")
+{
+    localStorage.name = "GUEST"
+    localStorage.accessLevel = ACCESS_LEVEL_GUEST
+    localStorage.token = null
+    localStorage.profilePhoto = null
+}
 
 
     
@@ -50,7 +51,7 @@ export default class App extends Component
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     <Route exact path="/" component={DisplayAllCars} />
                     <Route exact path="/Login" component={Login} />
-                    {/* <LoggedInRoute exact path="/Logout" component={Logout} /> */}
+                    <LoggedInRoute exact path="/Logout" component={Logout} />
                     <Route exact path="/DisplayAllCars" component={DisplayAllCars}/> 
                     <Route path="*" component={DisplayAllCars}/>                            
                 </Switch>
