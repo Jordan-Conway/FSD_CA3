@@ -15,7 +15,9 @@ export default class Home extends Component
                 <div className="table-container">
                 <h1>home</h1>
                 </div>
+    
             </div> 
+            
         )
     }
 }

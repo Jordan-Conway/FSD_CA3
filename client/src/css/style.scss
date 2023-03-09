@@ -2,32 +2,84 @@ body{
   margin:0;
   padding:0;
 }
+/*-------------------------------------------------------------- HEADER-------------------------------------------------------------------------*/
 .brandName{
   color:rgb(255, 255, 255);
   font-size:400%;
   margin-left:20px;
   text-align: center;
   font-family:"Fantasy";
+  font-weight: bold;
  
 }
+a.cancel-button{
+  color:rgb(255, 255, 255);
+  background-color:#c86262;
+  border-radius: 12px;
+  padding:5px;
+  &:hover{
+    color:rgb(19, 19, 19);
+    text-decoration:none;
+    }
+}
+/*-------------------------------------------------------------- LOGIN--------------------------------------------------------------------------*/
+.login-container{
+  margin-top:300px;
+  width:30%;
+  background-color: #f0f0f0;
+  padding:20px;
+  text-align: center;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  input{
+    margin:2px;
+  }
+  h2{
+    color:rgb(0, 0, 0);
+    
+    padding:2px;
+    text-align: center;
+    
+  }
+  span.login-button{
+    color:rgb(255, 255, 255);
+    border-radius: 12px;
+    background-color:#6290C8;
+    padding:5px;
+    padding-left:40px;
+    padding-right:40px;
+    &:hover{
+      color:rgb(0, 0, 0);
+      text-decoration:none;
+          }
+  }
+}
 
+
+/*-------------------------------------------------------------- REGISTER--------------------------------------------------------------------------*/
 .form-container{
-  margin-top:20px;
+  margin-top:250px;
   background-color:#6290C8;
- 
-
+  width:75%;
+  float:right;
+  margin-right:5px;
+  border: 1px solid #c4c3c3;
+/*-------------------------------------------------------------- DISPLAY TABLE--------------------------------------------------------------------------*/
   color:rgb(0, 0, 0);
   h2{
     color:white;
      background-color:rgb(8, 8, 49);
+     
   }
 
   tr {
 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
+    
+  
+  
     &:hover{
       background-color: #e4e4e4;
       }
@@ -39,12 +91,15 @@ a.edit-button,a.delete-button{
   background-color:#6290C8;
   color:#ffffff;
   padding:5px;
+  margin-right:2px;
   &:hover{
     color:rgb(0, 0, 0);
     text-decoration:none;
+    
         }
 }
 td {
+  
   text-align: center;
   width: 100%;
   height: 100px;
@@ -52,7 +107,7 @@ td {
 }
 
   
-  
+  /*-------------------------------------------------------------- NAV BUTTONS--------------------------------------------------------------------------*/
   .loginContainer{
     padding-top:20px;
     background-color:#E7E5DF;
@@ -66,15 +121,7 @@ td {
     text-decoration:none;
         }
   }
-  a.cancel-button{
-    background-color:#6290C8;
-    color:rgb(231, 229, 229);
-    padding:10px;
-      &:hover{
-    color:rgb(19, 19, 19);
-    text-decoration:none;
-        }
-  }
+
 }
 
 a.green-button, a.blue-button{
@@ -88,8 +135,9 @@ a.green-button, a.blue-button{
     text-decoration:none;
         }
       }
+      
   
-
+/*-------------------------------------------------------------- NAV BAR--------------------------------------------------------------------------*/
 div#navbarBottom{
   background-color:#6290C8;
   border: 1px solid #868686;
@@ -116,7 +164,7 @@ div#navbarBottom{
     }
 
 }
-
+/*-------------------------------------------------------------- TOP NAV--------------------------------------------------------------------------*/
 div#navbarTop{
   left: 0;
   overflow: hidden;
@@ -130,28 +178,27 @@ div#navbarTop{
     text-align:center;
     margin:0;
     padding:15px;
-
-    button.searchbutton{
-      
-      background-color: rgb(243, 100, 4);
-      color:white;
-      padding:5px;
-      
-
-    }
     }
   }
-
+/*-------------------------------------------------------------- SIDE NAV--------------------------------------------------------------------------*/
   .sidenav {
-    color:rgb(8, 8, 49);
-    
+    color:rgb(47, 47, 87);
+    position: fixed;
     height: 100%;
     width: 20%;
-    margin-top:200px;
+    margin-top:250px;
     left: 0;
-    background-color:#ececea;
-    border: 1px solid #d6d6d6;
-    padding-top:40px;
+    background-color:#eaecea;
+    border: 1px solid #c4c3c3;
+
+
+    h2{
+      color: rgb(255, 255, 255);
+      background-color:#6290C8;
+      text-align: center;
+      padding-bottom:5px;
+      border: 1px solid #797979;
+    }
     a{
       padding-top: 6px;
       padding-left: 8px; 
@@ -170,10 +217,9 @@ div#navbarTop{
       }
     }
   }
-
+/*-------------------------------------------------------------- FOOTER--------------------------------------------------------------------------*/
   footer{
-   position: absolute;
-   
+    position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -181,11 +227,47 @@ div#navbarTop{
     color: white;
     text-align: center;
   }
+  /*-------------------------------------------------------------- ADD--------------------------------------------------------------------------*/
+  form{
+    margin-top:235px;
+    background-color: #eaeceb;
+    margin-bottom:20px;
+    margin-left:200px;
+    margin-right:200px;
 
+    a.red-button{
+      color:rgb(255, 255, 255);
+      background-color:#c86262;
+      padding:10px;
+      &:hover{
+        color:rgb(19, 19, 19);
+        text-decoration:none;
+        }
+    }
+    span.add-button{
+      color:rgb(255, 255, 255);
+      background-color:#0b3a74;
+      padding:10px;
+      &:hover{
+        color:rgb(0, 0, 0);
+        text-decoration:none;
+        }
+    }
+    
+    
+
+  }
+  /*-------------------------------------------------------------- RESPONSIVE--------------------------------------------------------------------------*/
   @media screen and (max-width: 840px) {
     .sidenav{
   display:none;
     }
+
+    @media screen and (max-width: 400px) {
+      div#navbarBottom{
+    display:none;
+      }
+    }  
 
   }
 

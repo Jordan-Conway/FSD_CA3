@@ -6,7 +6,7 @@ export default class UserDetails extends Component
     {
         return(
             <div className="userDetails">
-                <img src={localStorage.userProfilePicture} />
+                {/* <img src={localStorage.userProfilePicture} /> */}
             </div>
         )
     }

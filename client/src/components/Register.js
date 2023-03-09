@@ -3,7 +3,7 @@ import {Redirect, Link} from "react-router-dom"
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
-
+import Navbar from "./Navbar"
 import {SERVER_HOST} from "../config/global_constants"
 
 
@@ -75,6 +75,10 @@ export default class Register extends Component
     render() 
     {     
         return (
+
+             <div className="navbarBottom">
+            <Navbar Navbar={this.state.Navbar} /> 
+            
             <form className="form-container" noValidate = {true} id = "loginOrRegistrationForm">
              <h2>New User Registration</h2>
                 {this.state.isRegistered ? <Redirect to="/DisplayAllCars"/> : null} 
@@ -125,10 +129,11 @@ export default class Register extends Component
                     onChange = {this.handleFileChange}
                 /><br/><br/>
                 
-                <Link className="login-button" to={this.handleSubmit}>Register</Link>
+                <LinkInClass className="login-button" to={this.handleSubmit}>Register</LinkInClass>
                 <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
                 </div>
             </form>
+            </div>
         )
     }
 }

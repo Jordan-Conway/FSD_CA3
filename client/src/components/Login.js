@@ -3,6 +3,7 @@ import {Redirect, Link} from "react-router-dom"
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
+import Navbar from "./Navbar"
 import {SERVER_HOST} from "../config/global_constants"
 
 
@@ -62,8 +63,11 @@ export default class Login extends Component
     {            
         return (
 
+                      
+            <div className="navbarBottom">
+            <Navbar Navbar={this.state.Navbar} /> 
             
-            <form className="form-container" noValidate = {true} id = "loginOrRegistrationForm">
+            <form className="login-container" noValidate = {true} id = "loginOrRegistrationForm">
                 <h2>Login</h2>
 
                 
@@ -94,7 +98,7 @@ export default class Login extends Component
             </form>
 
             
-             
+             </div>
         )
     }
 }

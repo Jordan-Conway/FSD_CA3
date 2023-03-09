@@ -42,7 +42,6 @@ export default class DisplayAllCars extends Component
                 }
             })
     }
-
   
     render() 
     {   
@@ -50,20 +49,27 @@ export default class DisplayAllCars extends Component
             
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
+
+            
             
 
             <div className="sidenav">
             <Sidenav Sidenav={this.state.Sidenav} /> 
-            
-
             </div> 
+  
                     
             <div className="form-container">
                 <div className="table-container">
-                    <CarTable cars={this.state.carParts} /> 
-                </div>
+                    <CarTable cars={this.state.carParts} />
+
+ 
             </div> 
-            </div>
+            
+            </div>   
+   
+           
+           </div>
+           
         )
     }
 }
