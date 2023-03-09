@@ -18,13 +18,21 @@ a.cancel-button{
   border-radius: 12px;
   padding:5px;
   &:hover{
-    color:rgb(19, 19, 19);
+    font-weight: bold;
+    color: white;
     text-decoration:none;
     }
 }
 /*-------------------------------------------------------------- LOGIN--------------------------------------------------------------------------*/
+h1{
+  color:rgb(0, 0, 0);
+  text-align: center;
+  font-family:"Fantasy";
+  font-weight: bold;
+}
 .login-container{
-  margin-top:300px;
+  margin-left: 35%;
+  margin-top:50px;
   width:30%;
   background-color: #f0f0f0;
   padding:20px;
@@ -32,7 +40,8 @@ a.cancel-button{
   position: fixed;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   input{
-    margin:2px;
+    margin:3px;
+   
   }
   h2{
     color:rgb(0, 0, 0);
@@ -41,16 +50,32 @@ a.cancel-button{
     text-align: center;
     
   }
+  .register-button{
+    color:rgb(0, 0, 0);
+    background-color: #c2c0c0;
+    border-radius: 12px;
+    padding:7px;
+    padding-left:70px;
+    padding-right:70px;
+    
+    &:hover{
+      color:rgb(0, 0, 0);
+      text-decoration:none;
+      font-weight: bold;
+          }
+  }
   span.login-button{
     color:rgb(255, 255, 255);
     border-radius: 12px;
     background-color:#6290C8;
+    
     padding:5px;
     padding-left:40px;
     padding-right:40px;
     &:hover{
-      color:rgb(0, 0, 0);
+      
       text-decoration:none;
+      font-weight: bold;
           }
   }
 }
@@ -111,6 +136,7 @@ td {
   .loginContainer{
     padding-top:20px;
     background-color:#E7E5DF;
+    
   }
   span.login-button{
     background-color:#6290C8;
@@ -127,12 +153,15 @@ td {
 a.green-button, a.blue-button{
   padding-left:10px;
 
-  color: white;
+  color: rgb(248, 248, 248);
   font-size:20px;
+  display:inline;
+  font-weight: bold;
 
   &:hover{
-    color:rgb(235, 118, 8);
+    color:rgb(134, 165, 250);
     text-decoration:none;
+    font-weight: bold;
         }
       }
       

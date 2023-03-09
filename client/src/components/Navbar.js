@@ -15,9 +15,8 @@ export default class Navbar extends Component {
           <Link className="green-button" to={"/Login"}>
             Login
           </Link>{" "}
-          <br />
-          <Link className="blue-button" to={"/Register"}>
-            Register
+        
+          <Link className="blue-button" to={"/Register"}>Register
           </Link>{" "}
           <br />
         </div>

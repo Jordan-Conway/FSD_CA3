@@ -3,7 +3,7 @@ import {Redirect, Link} from "react-router-dom"
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
-import Navbar from "./Navbar"
+import Register from "../components/Register"
 import {SERVER_HOST} from "../config/global_constants"
 
 
@@ -62,16 +62,11 @@ export default class Login extends Component
     render()
     {            
         return (
-
-                      
-            <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar} /> 
-            
+            <div className="Login">
+                <h1>DealsOnWheels.com</h1>
             <form className="login-container" noValidate = {true} id = "loginOrRegistrationForm">
-                <h2>Login</h2>
-
-                
-              
+                <h2>Sign In</h2>
+            
                 {this.state.isLoggedIn ? <Redirect to="/DisplayAllCars"/> : null} 
                 <div className="loginContainer">
                 <input 
@@ -91,14 +86,17 @@ export default class Login extends Component
                     value={this.state.password} 
                     onChange={this.handleChange}
                 /><br/><br/>
-                
+              
                 <LinkInClass value="Login" className="login-button" onClick={this.handleSubmit}/> 
-                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
+                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>  
+                <br/><br/>
+                <h6>Dont Have a account yet? Create one here</h6> 
+                <Link className="register-button" to={"/Register"}>Register
+          </Link>{" "}
                 </div>                                   
             </form>
 
-            
-             </div>
+            </div>
         )
     }
 }
