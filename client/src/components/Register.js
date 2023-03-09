@@ -126,9 +126,8 @@ export default class Register extends Component
                     onChange = {this.handleFileChange}
                 /><br/><br/>
                 
-                <LinkInClass className="login-button"  onClick={this.handleSubmit}>Register</LinkInClass>
-                <LinkInClass value="register" className="login-button" onClick={this.handleSubmit}/> 
-                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>   
+                <LinkInClass value="Register New User" className="login-button" onClick={this.handleSubmit} />
+                <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link> 
                 </div>
             </form>
             </div>
