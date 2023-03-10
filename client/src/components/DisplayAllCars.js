@@ -6,6 +6,7 @@ import {SERVER_HOST} from "../config/global_constants"
 
 import CarTable from "./CarTable"
 import '../css/style.css'
+import SortModal from "./SortModal"
 
 export default class DisplayAllCars extends Component 
 {
@@ -14,8 +15,11 @@ export default class DisplayAllCars extends Component
         super(props)
         
         this.state = {
-            carParts:[]
+            carParts:[],
+            showModal:false
         }
+        this.handleOnClick = this.handleOnClick.bind(this)
+        this.sortByPriceHighToLow = this.sortByPriceHighToLow.bind(this)
     }
     
     
@@ -39,11 +43,34 @@ export default class DisplayAllCars extends Component
             })
     }
 
-  
+    handleOnClick(){
+        this.setState({showModal:!this.state.showModal})
+    }
+
+    sortByPriceHighToLow(){
+        console.log(this.state.carParts.sort((a, b) => a.price < b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price < b.price ?-1:1)} )
+    }
+
+    sortByPriceLowToHigh(){
+        console.log(this.state.carParts.sort((a, b) => a.price > b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price > b.price ?-1:1)} )
+    }
     render() 
     {   
         return (           
             <div className="form-container">
+                <div>
+
+                </div>
+                <div>
+                    <button onClick={this.handleOnClick}>Sort|Filter</button>
+                    
+                {this.state.showModal?<SortModal showmodal={this.state.showModal}
+                 closeModal = {this.handleOnClick.bind(this)} 
+                  highLow = {this.sortByPriceHighToLow.bind(this)}
+                    lowHigh = {this.sortByPriceLowToHigh.bind(this)}/>:null}
+                </div>
                 <div className="table-container">
                     <CarTable cars={this.state.carParts} /> 
                 </div>
