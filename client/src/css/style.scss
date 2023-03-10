@@ -306,6 +306,17 @@ div#navbarTop{
     display:none;
       }
     }  
+    
+.userProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
+  div{
+    text-align: center;
+    margin: 1%;
+    border-radius: 10px;
+    border: 2px solid black;
+    flex-grow: 1;
   }
 

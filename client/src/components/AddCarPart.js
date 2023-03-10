@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form"
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
+
 import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
 
@@ -68,9 +69,7 @@ export default class AddCarPart extends Component {
 
 
     render() {
-        return (
-            
-                  
+        return (       
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
             
@@ -106,11 +105,10 @@ export default class AddCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
+                    <LinkInClass value="Add" className="green-button" onClick={this.handleSubmit} />
 
                     <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
                 </Form>
-            </div>
             </div>
         )
     }

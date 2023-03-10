@@ -118,9 +118,9 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Add" className="edit-button" onClick={this.handleSubmit} />
+                    <LinkInClass value="Add" className="green-button" onClick={this.handleSubmit} />
 
-                    <Link className="cancel-button" to={"/DisplayAllCars"}>Cancel</Link>
+                    <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
                 </Form>
             </div>
         )

@@ -8,7 +8,6 @@ export default class CarTable extends Component {
             <div>
                 {this.props.cars.map((part) => <CarPartCard key={part._id} part={part} />)}
             </div>
-
         )
     }
 }
