@@ -265,10 +265,11 @@ form span.add-button:hover {
     display: none;
   }
 }
-@media screen and (max-width: 840px) and (max-width: 400px) {
+@media screen and (max-width: 400px) {
   div#navbarBottom {
     display: none;
   }
+}
 .userProfile {
   display: flex;
   flex-direction: row;
@@ -280,11 +281,4 @@ form span.add-button:hover {
   border-radius: 10px;
   border: 2px solid black;
   flex-grow: 1;
-}
-
-.userProfilePicture {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid black;
 }/*# sourceMappingURL=style.css.map */

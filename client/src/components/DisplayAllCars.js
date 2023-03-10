@@ -95,10 +95,6 @@ export default class DisplayAllCars extends Component
             
             
             </div>   
-
-            
- 
-           </div>
            
         )
     }

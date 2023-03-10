@@ -110,6 +110,7 @@ export default class AddCarPart extends Component {
                     <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
                 </Form>
             </div>
+        </div>
         )
     }
 }
