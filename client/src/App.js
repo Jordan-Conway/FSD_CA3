@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/style.css"
 
+import DisplayAllCars from "./components/DisplayAllCars"
 import Register from "./components/Register"
 import Navbar from "./components/Navbar"
 import Sidenav from "./components/SideNav"
@@ -49,16 +50,7 @@ export default class App extends Component
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
-                    <Route exact path="/" component={DisplayAllCars} />
-
-                    {/* <Route exact path="/Login" component={Login} />
-                    <LoggedInRoute exact path="/Logout" component={Logout} /> */}
-                    <Route exact path="/AddCarPart" component={AddCarPart} />
-                    <Route exact path="/EditCarPart/:id" component={EditCarPart} />
-                    <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
-                    <Route exact path="/UserProfile" component={UserProfile}/>
-                    <Route exact path="/DisplayAllCars" component={DisplayAllCars}/> 
-                    <Route path="*" component={DisplayAllCars}/>                            
+                    <Route exact path="/" component={DisplayAllCars} />                       
                 </Switch>
             </BrowserRouter>
         )

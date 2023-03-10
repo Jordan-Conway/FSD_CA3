@@ -308,11 +308,11 @@ div#navbarTop{
     }
   }
 
-    @media screen and (max-width: 400px) {
-      div#navbarBottom{
-    display:none;
-      }
-    }  
+  @media screen and (max-width: 400px) {
+    div#navbarBottom{
+      display:none;
+    }
+  }  
     
 .userProfile {
   display: flex;
