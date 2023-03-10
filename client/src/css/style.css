@@ -3,6 +3,38 @@ body {
   padding: 0;
 }
 
+.card {
+  display: table;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+  float: right;
+  width: 25%;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.card .card_information {
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #bebebe;
+  color: grey;
+}
+.card .card_information .card_price {
+  color: grey;
+  font-size: 22px;
+}
+.card .card_title {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid #bebebe;
+}
+.card .card_bottom {
+  padding-top: 10px;
+  background-color: rgb(207, 207, 207);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: 1px solid #bebebe;
+}
+
 /*-------------------------------------------------------------- HEADER-------------------------------------------------------------------------*/
 .brandName {
   color: rgb(255, 255, 255);
@@ -78,55 +110,28 @@ h1 {
 }
 
 /*-------------------------------------------------------------- REGISTER--------------------------------------------------------------------------*/
-.form-container {
-  margin-top: 250px;
-  background-color: #6290C8;
-  width: 75%;
-  float: right;
-  margin-right: 5px;
-  border: 1px solid #c4c3c3;
-  /*-------------------------------------------------------------- DISPLAY TABLE--------------------------------------------------------------------------*/
-  color: rgb(0, 0, 0);
-  /*-------------------------------------------------------------- NAV BUTTONS--------------------------------------------------------------------------*/
-}
-.form-container h2 {
-  color: white;
-  background-color: rgb(8, 8, 49);
-}
-.form-container tr {
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-.form-container tr:hover {
-  background-color: #e4e4e4;
-}
-.form-container a.edit-button, .form-container a.delete-button {
+/*-------------------------------------------------------------- DISPLAY TABLE--------------------------------------------------------------------------*/
+a.edit-button, a.delete-button {
   background-color: #6290C8;
   color: #ffffff;
   padding: 5px;
   margin-right: 2px;
+  /*-------------------------------------------------------------- NAV BUTTONS--------------------------------------------------------------------------*/
 }
-.form-container a.edit-button:hover, .form-container a.delete-button:hover {
+a.edit-button:hover, a.delete-button:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
-.form-container td {
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  margin: 10px;
-}
-.form-container .loginContainer {
+a.edit-button .loginContainer, a.delete-button .loginContainer {
   padding-top: 20px;
   background-color: #E7E5DF;
 }
-.form-container span.login-button {
+a.edit-button span.login-button, a.delete-button span.login-button {
   background-color: #6290C8;
   color: white;
   padding: 10px;
 }
-.form-container span.login-button:hover {
+a.edit-button span.login-button:hover, a.delete-button span.login-button:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -169,7 +174,6 @@ div#navbarTop {
   left: 0;
   overflow: hidden;
   background-color: rgb(8, 8, 49);
-  position: fixed;
   padding-top: 20px;
   top: 0;
   width: 100%;
@@ -183,10 +187,10 @@ div#navbarTop ul {
 /*-------------------------------------------------------------- SIDE NAV--------------------------------------------------------------------------*/
 .sidenav {
   color: rgb(47, 47, 87);
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 20%;
-  margin-top: 250px;
+  margin-top: 10px;
   left: 0;
   background-color: #eaecea;
   border: 1px solid #c4c3c3;
@@ -216,10 +220,11 @@ div#navbarTop ul {
 
 /*-------------------------------------------------------------- FOOTER--------------------------------------------------------------------------*/
 footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  margin-top: 1500px;
+  position: static;
   background-color: rgb(8, 8, 49);
   color: white;
   text-align: center;
@@ -227,7 +232,7 @@ footer {
 
 /*-------------------------------------------------------------- ADD--------------------------------------------------------------------------*/
 form {
-  margin-top: 235px;
+  margin-top: 10px;
   background-color: #eaeceb;
   margin-bottom: 20px;
   margin-left: 200px;
@@ -241,15 +246,17 @@ form a.red-button {
 form a.red-button:hover {
   color: rgb(19, 19, 19);
   text-decoration: none;
+  font-weight: bold;
 }
 form span.add-button {
   color: rgb(255, 255, 255);
-  background-color: #0b3a74;
+  background-color: #4e8ad3;
   padding: 10px;
 }
 form span.add-button:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  font-weight: bold;
 }
 
 /*-------------------------------------------------------------- RESPONSIVE--------------------------------------------------------------------------*/

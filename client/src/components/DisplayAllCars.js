@@ -8,6 +8,7 @@ import CarTable from "./CarTable"
 import Navbar from "./Navbar"
 import Sidenav from "./SideNav"
 import '../css/style.css'
+import SortModal from "./SortModal"
 
 // import {ACCESS_LEVEL_GUEST, ACCESS_LEVEL_ADMIN, SERVER_HOST} from "../config/global_constants"
 
@@ -18,8 +19,11 @@ export default class DisplayAllCars extends Component
         super(props)
         
         this.state = {
-            carParts:[]
+            carParts:[],
+            showModal:false
         }
+        this.handleOnClick = this.handleOnClick.bind(this)
+        this.sortByPriceHighToLow = this.sortByPriceHighToLow.bind(this)
     }
     
     
@@ -42,7 +46,20 @@ export default class DisplayAllCars extends Component
                 }
             })
     }
-  
+
+    handleOnClick(){
+        this.setState({showModal:!this.state.showModal})
+    }
+
+    sortByPriceHighToLow(){
+        console.log(this.state.carParts.sort((a, b) => a.price < b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price < b.price ?-1:1)} )
+    }
+
+    sortByPriceLowToHigh(){
+        console.log(this.state.carParts.sort((a, b) => a.price > b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price > b.price ?-1:1)} )
+    }
     render() 
     {   
         return (   
@@ -51,23 +68,33 @@ export default class DisplayAllCars extends Component
             <Navbar Navbar={this.state.Navbar} /> 
 
             
-            
+      
 
             <div className="sidenav">
             <Sidenav Sidenav={this.state.Sidenav} /> 
+            <button onClick={this.handleOnClick}>Sort|Filter</button>
+                    
+                    {this.state.showModal?<SortModal showmodal={this.state.showModal}
+                     closeModal = {this.handleOnClick.bind(this)} 
+                      highLow = {this.sortByPriceHighToLow.bind(this)}
+                        lowHigh = {this.sortByPriceLowToHigh.bind(this)}/>:null}
+                    
             </div> 
+            
   
                     
             <div className="form-container">
+                
                 <div className="table-container">
                     <CarTable cars={this.state.carParts} />
-
- 
+  
             </div> 
             
+            
             </div>   
-   
-           
+
+            
+ 
            </div>
            
         )
@@ -112,3 +139,4 @@ export default class DisplayAllCars extends Component
 //     )
 // }
 // }
+

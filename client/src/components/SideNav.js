@@ -23,6 +23,8 @@ export default class Sidenav extends Component {
                 <li>
                   <a href="#">Other</a>
                 </li>
+
+                
               </ul>
             </div>
           </nav>
