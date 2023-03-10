@@ -8,7 +8,6 @@ export default class Navbar extends Component {
         <div className="brandName">DealsOnWheels</div>
         {/* <input class="searchfrom" type="search" placeholder="Search" aria-label="Search">
             <button class="searchbutton" type="submit">Search</button>
-
              */}
 
         <div className="login_regester_container">

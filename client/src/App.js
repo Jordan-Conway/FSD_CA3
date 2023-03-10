@@ -11,15 +11,11 @@ import EditCarPart from "./components/EditCarPart"
 import DeleteCarPart from "./components/DeleteCarPart"
 import UserProfile from "./components/UserProfile"
 import AddCarPart from "./components/AddCarPart"
+import DisplayAllCars from "./components/DisplayAllCars"
 // import ResetDatabase from "./components/ResetDatabase"
 
 // import Login from "./components/Login"
 // import Logout from "./components/Logout"
-import EditCarPart from "./components/EditCarPart"
-import DeleteCarPart from "./components/DeleteCarPart"
-import DisplayAllCars from "./components/DisplayAllCars"
-import UserProfile from "./components/UserProfile"
-import AddCarPart from "./components/AddCarPart"
 // import LoggedInRoute from "./components/LoggedInRoute"
 
 
