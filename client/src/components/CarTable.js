@@ -1,30 +1,13 @@
-import React, {Component} from "react"
-import CarTableRow from "./CarTableRow"
+import React, { Component } from "react"
+import CarPartCard from "./CarPartCard"
 
 
-export default class CarTable extends Component 
-{
-    render() 
-    {
+export default class CarTable extends Component {
+    render() {
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Item Number</th>
-                        <th>Material</th>
-                        <th>Colour</th>
-                        <th>Price</th>
-                        <th>Condition</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                  
-                <tbody>
-                    {this.props.cars.map((part) => <CarTableRow key={part._id} part={part}/>)}
-                </tbody>
-            </table>      
+            <div>
+                {this.props.cars.map((part) => <CarPartCard key={part._id} part={part} />)}
+            </div>
         )
     }
 }

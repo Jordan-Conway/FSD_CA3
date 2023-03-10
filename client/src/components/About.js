@@ -6,7 +6,9 @@ export default class About extends Component
    
     render() 
     {   
-        return (           
+        return (     
+           
+            
             <div className="form-container">
                 <div className="table-container">
                 <h1>about</h1>

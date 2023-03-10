@@ -6,6 +6,7 @@ import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
 
+import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
 
 
@@ -68,10 +69,12 @@ export default class AddCarPart extends Component {
 
 
     render() {
-        return (
-            <div className="form-container">
+        return (       
+            <div className="navbarBottom">
+            <Navbar Navbar={this.state.Navbar} /> 
+            
                 {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAllCars" /> : null}
-
+                <div className="addFrom">
                 <Form>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
