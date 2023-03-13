@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import CarTable from "./CarTable"
 import Navbar from "./Navbar"
 
 export default class ShoppingCart extends Component{
@@ -6,15 +7,18 @@ export default class ShoppingCart extends Component{
         super(props)
 
         this.state = {
-            items: this.props.items,
+            items: localStorage.getItem('cart'),
         }
     }
 
     render(){
         return(
-            <div className="navbarBottom">
-            <Navbar/> 
-        </div>
+            <>
+                <div className="navbarBottom">
+                <Navbar/>
+                </div>
+                <CarTable cars={this.state.items.split(',')} /> 
+            </>
         )
     }
 }
