@@ -45,7 +45,7 @@ export default class App extends Component
                     <Route exact path="/EditCarPart/:id" component={EditCarPart} />
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
-                    <Route exact path="/ShoppingCart" component={ShoppingCart} />
+                    <Route exact path="/ShoppingCart" component={<ShoppingCart items={localStorage.cart}/>} />
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     <Route exact path="/" component={DisplayAllCars} />                       
                 </Switch>
