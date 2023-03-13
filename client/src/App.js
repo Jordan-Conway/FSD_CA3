@@ -26,8 +26,10 @@ if (typeof localStorage.accessLevel === "undefined")
     localStorage.profilePhoto = null
 }
 
+if(!localStorage.getItem('cart')){
+    localStorage.setItem('cart', {})
+}
 
-    
 export default class App extends Component 
 {
     render() 
@@ -45,7 +47,7 @@ export default class App extends Component
                     <Route exact path="/EditCarPart/:id" component={EditCarPart} />
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
-                    <Route exact path="/ShoppingCart" component={<ShoppingCart items={localStorage.cart}/>} />
+                    <Route exact path="/ShoppingCart" component={ShoppingCart} />
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     <Route exact path="/" component={DisplayAllCars} />                       
                 </Switch>

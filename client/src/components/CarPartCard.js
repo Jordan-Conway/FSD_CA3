@@ -3,6 +3,14 @@ import { Link } from "react-router-dom"
 
 
 export default class CarPartCard extends Component {
+
+    addToCart = e => {
+        let tempList = []
+        tempList.push(localStorage.getItem('cart'))
+        tempList.push(this.props.part._id)
+        localStorage.setItem('cart', tempList)
+    }
+
     render() {
         return (
         
@@ -17,6 +25,7 @@ export default class CarPartCard extends Component {
                     <p>{this.props.part.condition}</p>
                 </div>
                 <div className="card_bottom">
+                <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button>
                 <Link className="edit-button" to={"/EditCarPart/" + this.props.part._id}>Edit</Link>
                 <Link className="delete-button" to={"/DeleteCarPart/" + this.props.part._id}>Delete</Link>
                 </div>
