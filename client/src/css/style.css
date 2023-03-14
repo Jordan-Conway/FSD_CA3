@@ -114,7 +114,7 @@ h1 {
   font-weight: bold;
 }
 
-/*-------------------------------------------------------------- REGISTER--------------------------------------------------------------------------*/
+
 /*-------------------------------------------------------------- DISPLAY TABLE--------------------------------------------------------------------------*/
 a.edit-button, a.delete-button {
   background-color: #6290C8;
@@ -163,7 +163,7 @@ div#navbarBottom li {
   display: inline;
   font-family: sans-serif;
   font-size: 20px;
-  color: rgb(235, 118, 23);
+ 
 }
 div#navbarBottom li a {
   color: rgb(245, 245, 245);
@@ -171,7 +171,8 @@ div#navbarBottom li a {
   padding: 15px;
 }
 div#navbarBottom li a:hover {
-  color: rgb(12, 12, 12);
+  color: rgb(2, 2, 2);
+  font:bold;
 }
 
 /*-------------------------------------------------------------- TOP NAV--------------------------------------------------------------------------*/
@@ -236,6 +237,13 @@ footer {
 }
 
 /*-------------------------------------------------------------- ADD--------------------------------------------------------------------------*/
+
+.page_title{
+  text-align: center;
+  font:bold;
+  font-size: 300%;
+}
+
 form {
   margin-top: 10px;
   background-color: #eaeceb;
@@ -249,7 +257,7 @@ form a.red-button {
   padding: 10px;
 }
 form a.red-button:hover {
-  color: rgb(19, 19, 19);
+  color: rgb(250, 250, 250);
   text-decoration: none;
   font-weight: bold;
 }
@@ -259,18 +267,37 @@ form span.add-button {
   padding: 10px;
 }
 form span.add-button:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(250, 250, 250);
   text-decoration: none;
   font-weight: bold;
 }
 
 /*-------------------------------------------------------------- RESPONSIVE--------------------------------------------------------------------------*/
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1100px) {
   .sidenav {
     display: none;
   }
+  .card {
+    float:left;
+    margin-left:50px;
+  }
 }
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 840px) {
+  .card {
+    display: table;
+    align-items: center;
+    text-align: center;
+ 
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left:10px;
+    margin-right:10px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
   div#navbarBottom {
     display: none;
   }
