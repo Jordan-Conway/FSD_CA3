@@ -21,15 +21,20 @@ body{
     background-color: rgb(243, 243, 243);
     border: 1px solid #bebebe;
     color: grey;
+    width:100%;
     
    .card_price{
     color: grey;
   font-size: 22px;
+  
    }
   }
   .card_title{
-    background-color: rgb(238, 238, 238);
-    border: 1px solid #bebebe;
+    background-color: rgb(207, 207, 207);
+    border: 1px solid #c9c7c7;
+    width:100%;
+    font-weight:bold;
+    color:rgb(75, 75, 75);
   }
 
   .card_bottom{
@@ -38,6 +43,7 @@ body{
     padding-bottom:10px;
     padding-top:10px;
     border: 1px solid #bebebe;
+    width:100%;
   }
  
 }

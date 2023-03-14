@@ -4,7 +4,7 @@ import { Redirect, Link } from "react-router-dom"
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
-
+import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
 
 export default class EditCarPart extends Component {
@@ -85,8 +85,15 @@ export default class EditCarPart extends Component {
     
     render() {
         return (
+
+            <div className="navbarBottom">
+            <Navbar Navbar={this.state.Navbar} /> 
+            
             <div className="form-container">
                 {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAllCars" /> : null}
+                <div className="page_title">
+                    Edit Car
+                </div>
 
                 <Form>
                     <Form.Group controlId="name">
@@ -118,10 +125,11 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Add" className="green-button" onClick={this.handleSubmit} />
+                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 
                     <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
                 </Form>
+            </div>
             </div>
         )
     }

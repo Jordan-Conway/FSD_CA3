@@ -1,3 +1,4 @@
+
 import React, {Component} from "react"
 import { Link } from "react-router-dom"
 
@@ -9,8 +10,6 @@ import Navbar from "./Navbar"
 import Sidenav from "./SideNav"
 import '../css/style.css'
 import SortModal from "./SortModal"
-
-// import {ACCESS_LEVEL_GUEST, ACCESS_LEVEL_ADMIN, SERVER_HOST} from "../config/global_constants"
 
 export default class DisplayAllCars extends Component 
 {
@@ -62,8 +61,7 @@ export default class DisplayAllCars extends Component
     }
     render() 
     {   
-        return (   
-            
+        return (           
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
 
@@ -95,47 +93,6 @@ export default class DisplayAllCars extends Component
             
             
             </div>   
-           
         )
     }
 }
-
-
-
-
-// render() 
-// {   
-//     return (           
-//         <div className="form-container">
-//             {
-//                 localStorage.accessLevel > ACCESS_LEVEL_GUEST 
-//                 ? <div className="logout">
-//                     {
-//                         localStorage.profilePhoto !== "null" 
-//                         ? <img id="profilePhoto" src={`data:;base64,${localStorage.profilePhoto}`} alt=""/>
-//                         : null
-//                     }                        
-//                     <Logout/>
-//                   </div>
-//                 : <div>
-//                     <Link className="green-button" to={"/Login"}>Login</Link>
-//                     <Link className="blue-button" to={"/Register"}>Register</Link>  
-//                     <Link className="red-button" to={"/ResetDatabase"}>Reset Database</Link>  <br/><br/><br/></div>
-//             }
-            
-//             <div className="table-container">
-//                 <CarTable cars={this.state.cars} /> 
-                    
-//                 {
-//                     localStorage.accessLevel >= ACCESS_LEVEL_ADMIN 
-//                     ? <div className="add-new-car">
-//                         <Link className="blue-button" to={"/AddCar"}>Add New Car</Link>
-//                       </div>
-//                     : null
-//                 }
-//             </div>
-//         </div> 
-//     )
-// }
-// }
-
