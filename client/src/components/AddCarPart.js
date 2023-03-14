@@ -111,7 +111,7 @@ export default class AddCarPart extends Component {
                 </Form>
             </div>
         </div>
-            </div>
+    
         )
 }
 }

@@ -1,5 +1,11 @@
 const mongoose = require(`mongoose`)
 
+let carPhotosSchema = new mongoose.Schema(
+    {
+       filename:{type:String}
+    })
+
+
 let carPartsSchema = new mongoose.Schema(
    {
         name: {type: String},
@@ -7,6 +13,7 @@ let carPartsSchema = new mongoose.Schema(
         material: {type: String},
         colour: {type: String},
         price: {type: String},
+        photos:[carPhotosSchema],
         condition: {type: String} 
    },
    {

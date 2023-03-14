@@ -10,6 +10,11 @@ export default class CarPartCard extends Component {
                 <div className="card_title">{this.props.part.name}</div>
                 <div className="card_information">
 
+
+                <p>{this.props.part.photo}</p>
+
+
+
                 <p>Item Number:{this.props.part.item_number}</p>
                 <p>Material:{this.props.part.material}</p>
                 <p>Colour:{this.props.part.colour}</p>

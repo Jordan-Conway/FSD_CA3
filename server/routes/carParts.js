@@ -16,6 +16,22 @@ router.post(`/carParts`, (req, res) => {
 
 })
 
+router.get(`/cars/photo/:filename`, (req, res) => 
+{   
+    fs.readFile(`${process.env.UPLOADED_FILES_FOLDER}/${req.params.filename}`, 'base64', (err, fileData) => 
+        {        
+            if(fileData)
+            {  
+                res.json({image:fileData})                           
+            }   
+        else
+        {
+            res.json({image:null})
+        }
+    })             
+})
+
+
 router.put(`/carParts/:id`, (req, res) => {
     carPartsSchema.findByIdAndUpdate(req.params.id, { $set: req.body }, (error, data) => {
         res.json(data)

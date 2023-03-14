@@ -6,9 +6,10 @@ export default class Navbar extends Component {
     return (
       <div id="navbarTop">
         <div className="brandName">DealsOnWheels</div>
-        {/* <input class="searchfrom" type="search" placeholder="Search" aria-label="Search">
+
+        <input class="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
             <button class="searchbutton" type="submit">Search</button>
-             */}
+            
 
         <div className="login_regester_container">
           <Link className="green-button" to={"/Login"}>
@@ -43,6 +44,11 @@ export default class Navbar extends Component {
                 <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
            
                 </li>    
+                <li>
+
+                  <Link className="blue-button" to={"/UserTable"}>User list</Link>
+
+              </li>   
               </ul>
             </div>
           </nav>
