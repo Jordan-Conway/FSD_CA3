@@ -17,7 +17,7 @@ export default class ShoppingCart extends Component{
                 <div className="navbarBottom">
                 <Navbar/>
                 </div>
-                <CarTable cars={this.state.items.split(',')} /> 
+                <CarTable isAddable={false} cars={this.state.items.split(',')} /> 
             </>
         )
     }
