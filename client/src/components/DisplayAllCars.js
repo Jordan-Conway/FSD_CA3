@@ -82,7 +82,6 @@ export default class DisplayAllCars extends Component
   
                     
             <div className="form-container">
-                
                 <div className="table-container">
                     <CarTable cars={this.state.carParts} /> 
                 </div>
