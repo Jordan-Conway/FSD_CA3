@@ -10,17 +10,10 @@ export default class CarTable extends Component {
         }
     }
 
-    //If addable is not specified, default to true
-    componentDidMount(){
-        if(!this.state.addable){
-            this.setState({isAddable: true})
-        }
-    }
-
     render() {
         return (
             <div>
-                {this.props.cars.map((part) => <CarPartCard addable={this.state.addable} key={part._id} part={part} />)}
+                {this.props.cars.map((part) => <CarPartCard addable={this.state.isAddable} key={part._id} part={part} />)}
             </div>
         )
     }

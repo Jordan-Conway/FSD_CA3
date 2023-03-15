@@ -8,13 +8,7 @@ export default class CarPartCard extends Component {
         super(props)
 
         this.state = {
-            addable: true
-        }
-    }
-
-    componentDidMount(){
-        if(this.props.addable){
-            this.setState({addable: this.props.addable})
+            addable: this.props.addable
         }
     }
 

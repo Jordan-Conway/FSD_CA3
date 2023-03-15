@@ -7,8 +7,12 @@ export default class ShoppingCart extends Component{
         super(props)
 
         this.state = {
-            items: localStorage.getItem('cart'),
+            items: localStorage.getItem('cart').split(','),
         }
+    }
+
+    handleBuy = e => {
+
     }
 
     render(){
@@ -17,7 +21,8 @@ export default class ShoppingCart extends Component{
                 <div className="navbarBottom">
                 <Navbar/>
                 </div>
-                <CarTable isAddable={false} cars={this.state.items.split(',')} /> 
+                <button onClick={this.handleBuy}>Purchase</button>
+                <CarTable isAddable={false} cars={this.state.items} /> 
             </>
         )
     }
