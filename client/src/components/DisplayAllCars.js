@@ -63,7 +63,7 @@ export default class DisplayAllCars extends Component
     {   
         return (           
             <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar} /> 
+            <Navbar Navbar={this.state.Navbar}  cars={this.state.carParts}/> 
 
             
       

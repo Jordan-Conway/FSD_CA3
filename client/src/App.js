@@ -12,6 +12,7 @@ import EditCarPart from "./components/EditCarPart"
 import DeleteCarPart from "./components/DeleteCarPart"
 import UserProfile from "./components/UserProfile"
 import AddCarPart from "./components/AddCarPart"
+import AdminCarPartsTable from "./components/AdminCarPartsTable"
 
 // import ResetDatabase from "./components/ResetDatabase"
 
@@ -21,6 +22,7 @@ import Login from "./components/Login"
 
 
 import {ACCESS_LEVEL_GUEST} from "./config/global_constants"
+import DisplayAdminTable from "./components/DisplayAdminTable"
 
 if (typeof localStorage.accessLevel === "undefined")
 {
@@ -51,6 +53,7 @@ export default class App extends Component
                     <Route exact path="/EditCarPart/:id" component={EditCarPart} />
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
+                    <Route exact path="/DisplayAdminTable" component={DisplayAdminTable}/>
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     
                     <Route path="*" component={DisplayAllCars}/>                        
