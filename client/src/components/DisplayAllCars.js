@@ -1,33 +1,30 @@
 
-import React, {Component} from "react"
+import React, { Component } from "react"
 import { Link } from "react-router-dom"
 
 import axios from "axios"
-import {SERVER_HOST} from "../config/global_constants"  
+import { SERVER_HOST } from "../config/global_constants"
 // import Logout from "./Logout"
-import CarTable from "./CarTable"
+import CarPartBody from "./CarPartBody"
 import Navbar from "./Navbar"
 import Sidenav from "./SideNav"
 import '../css/style.css'
-import SortModal from "./SortModal"
 
-export default class DisplayAllCars extends Component 
-{
-    constructor(props) 
-    {
+export default class DisplayAllCars extends Component {
+    constructor(props) {
         super(props)
-        
+
         this.state = {
-            carParts:[],
-            showModal:false
+            carPartsReset: [],
+            carParts: [],
+            showModal: false
         }
         this.handleOnClick = this.handleOnClick.bind(this)
         this.sortByPriceHighToLow = this.sortByPriceHighToLow.bind(this)
     }
-    
-    
-    componentDidMount() 
-    {
+
+
+    componentDidMount() {
         axios.get(`${SERVER_HOST}/carParts`)
             .then(res => {
                 if (res.data) {
@@ -37,6 +34,7 @@ export default class DisplayAllCars extends Component
                     else {
                         console.log("Records read")
                         this.setState({ carParts: res.data })
+                        this.setState({ carPartsReset: res.data })
                         console.log(res.data)
                     }
                 }
@@ -46,52 +44,61 @@ export default class DisplayAllCars extends Component
             })
     }
 
-    handleOnClick(){
-        this.setState({showModal:!this.state.showModal})
+    handleOnClick() {
+        this.setState({ showModal: !this.state.showModal })
     }
 
-    sortByPriceHighToLow(){
-        console.log(this.state.carParts.sort((a, b) => a.price < b.price ?-1:1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => a.price < b.price ?-1:1)} )
+    sortByPriceHighToLow() {
+        this.state.carParts = this.state.carPartsReset
+        console.log(this.state.carParts.sort((a, b) => a.price > b.price ? 1 : -1))
+        this.setState({ carParts: this.state.carParts.sort((a, b) => a.price > b.price ? 1 : -1) })
     }
 
-    sortByPriceLowToHigh(){
-        console.log(this.state.carParts.sort((a, b) => a.price > b.price ?-1:1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => a.price > b.price ?-1:1)} )
+    sortByPriceLowToHigh() {
+        this.state.carParts = this.state.carPartsReset
+        console.log(this.state.carParts.sort((a, b) => a.price < b.price ? 1 : -1))
+        this.setState({ carParts: this.state.carParts.sort((a, b) => a.price < b.price ? 1 : -1) })
     }
-    render() 
-    {   
-        return (           
+    filterByNew() {
+        console.log(this.state.carParts);
+        this.state.carParts = this.state.carPartsReset;
+        this.setState({ carParts: this.state.carParts.filter((part) => part.condition.includes("New")) });
+    }
+    filterByUsed() {
+        console.log(this.state.carParts)
+        this.state.carParts = this.state.carPartsReset;
+        this.setState({ carParts: this.state.carParts.filter((part) => part.condition.includes("Used")) });
+    }
+    filterByOther() {
+        console.log(this.state.carParts)
+        this.state.carParts = this.state.carPartsReset;
+        this.state.carParts = this.state.carParts.filter((part) => !part.condition.includes("New"));
+        this.setState({ carParts: this.state.carParts.filter((part) => !part.condition.includes("Used")) });
+    }
+    resetArray() {
+        this.state.carParts = this.state.carPartsReset;
+        this.setState({ carParts: this.state.carPartsReset });
+        console.log(this.state.carParts);
+    }
+    render() {
+        return (
             <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar}  cars={this.state.carParts}/> 
-
-            
-      
-
-            <div className="sidenav">
-            <Sidenav Sidenav={this.state.Sidenav} /> 
-            <button onClick={this.handleOnClick}>Sort|Filter</button>
-                    
-                    {this.state.showModal?<SortModal showmodal={this.state.showModal}
-                     closeModal = {this.handleOnClick.bind(this)} 
-                      highLow = {this.sortByPriceHighToLow.bind(this)}
-                        lowHigh = {this.sortByPriceLowToHigh.bind(this)}/>:null}
-                    
-            </div> 
-            
-  
-                    
-            <div className="form-container">
-                <div className="table-container">
-                    <CarTable cars={this.state.carParts} /> 
+                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
+                <div className="main-body">
+                    <div className="sidenav">
+                        <Sidenav Sidenav={this.state.Sidenav}
+                            highLow={this.sortByPriceHighToLow.bind(this)}
+                            lowHigh={this.sortByPriceLowToHigh.bind(this)}
+                            filterNew={this.filterByNew.bind(this)}
+                            filterUsed={this.filterByUsed.bind(this)}
+                            filterOther={this.filterByOther.bind(this)} />
+                        <button onClick={this.resetArray.bind(this)}>Reset Filters</button>
+                    </div>
+                    <div className="table-container">
+                        <CarPartBody cars={this.state.carParts} />
+                    </div>
                 </div>
-                <div className="add-new-car">
-                                <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-                            </div>
-            </div> 
-            
-            
-            </div>   
+            </div>
         )
     }
 }

@@ -31,7 +31,7 @@ export default class Navbar extends Component {
                   
                 </li>
                 <li>
-                  <a href="#">All Parts</a>
+                
                 </li>
                 <li>
                   <a href="#">Used</a>
