@@ -20,7 +20,6 @@ export default class ShoppingCart extends Component{
 
     handleBuy = e => {
         const purchaseObject = {
-            purchaseId: "1",
             purchaseDate: new Date(),
             purchaseStatus: 'paid',
             items: this.state.items
@@ -40,6 +39,7 @@ export default class ShoppingCart extends Component{
                     console.log("Error with purchase")
                 }
             })
+
     }
 
     render(){
