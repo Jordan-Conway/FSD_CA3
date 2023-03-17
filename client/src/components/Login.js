@@ -64,6 +64,9 @@ export default class Login extends Component
         return (
             <div className="Login">
                 <h1>DealsOnWheels.com</h1>
+                <div classname="login-background">
+
+        
             <form className="login-container" noValidate = {true} id = "loginOrRegistrationForm">
                 <h2>Sign In</h2>
             
@@ -93,10 +96,12 @@ export default class Login extends Component
                 <h6>Dont Have a account yet? Create one here</h6> 
                 <Link className="register-button" to={"/Register"}>Register
           </Link>{" "}
-                </div>                                   
+                </div>  
+                                                 
             </form>
 
             </div>
+              </div>
         )
     }
 }
