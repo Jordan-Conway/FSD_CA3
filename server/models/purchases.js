@@ -6,8 +6,8 @@ const Item = require('./items.js')
 let itemDataSchema = new mongoose.Schema(
     {
         itemId:{type: String}, 
-        itemPrice:{type: Number, match:/^\d+$/}, 
-        quantity:{type:Number, match:/^\d+$/}
+        // itemPrice:{type: Number, match:/^\d+$/}, 
+        // quantity:{type:Number, match:/^\d+$/}
     }
 )
 
@@ -15,7 +15,7 @@ let purchaseSchema = new mongoose.Schema(
     {
         purchaseId:{type:String},
         purchaseDate:{type:Date},
-        purchaseStatus:{type:String, enum:['paid', "dispatched", "arrived", "cancelled"]},
+        purchaseStatus:{type:String, enum:["paid", "dispatched", "arrived", "cancelled"]},
         items: [itemDataSchema]
     },
     {

@@ -26,10 +26,6 @@ if (typeof localStorage.accessLevel === "undefined")
     localStorage.profilePhoto = null
 }
 
-if(!localStorage.getItem('cart')){
-    localStorage.setItem('cart', {})
-}
-
 export default class App extends Component 
 {
     render() 
