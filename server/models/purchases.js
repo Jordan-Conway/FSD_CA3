@@ -15,7 +15,7 @@ let purchaseSchema = new mongoose.Schema(
     {
         purchaseId:{type:String},
         purchaseDate:{type:Date},
-        purchaseStatus:{type:String, enum:['paid', "dispatched", "arrived", "cancelled"]},
+        purchaseStatus:{type:String, enum:["paid", "dispatched", "arrived", "cancelled"]},
         items: [itemDataSchema]
     },
     {

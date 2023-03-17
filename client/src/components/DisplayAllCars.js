@@ -84,7 +84,7 @@ export default class DisplayAllCars extends Component
             <div className="form-container">
                 
                 <div className="table-container">
-                    <CarTable cars={this.state.carParts} /> 
+                    <CarTable isAddable={true} cars={this.state.carParts} /> 
                 </div>
                 <div className="add-new-car">
                                 <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
