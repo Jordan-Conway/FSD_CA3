@@ -67,8 +67,6 @@ export default class Navbar extends Component {
 
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
 
-                <li>
-
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
 
                 <li>
