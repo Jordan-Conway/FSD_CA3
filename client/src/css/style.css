@@ -3,6 +3,18 @@ body {
   padding: 0;
 }
 
+.logo {
+  margin-top: -200px;
+  margin-bottom: -200px;
+  margin-left: 33%;
+}
+
+img.img {
+  padding-right: -200px;
+  width: 50%;
+  height: 50%;
+}
+
 .card {
   display: table;
   align-items: center;
@@ -15,25 +27,27 @@ body {
   margin-right: 20px;
 }
 .card .card_information {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
   border: 1px solid #bebebe;
   color: grey;
   width: 100%;
 }
 .card .card_information .card_price {
-  color: grey;
+  color: rgb(125, 132, 236);
   font-size: 22px;
+  font-weight: bold;
 }
 .card .card_title {
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(241, 241, 241);
   border: 1px solid #c9c7c7;
   width: 100%;
   font-weight: bold;
+  font-size: 150%;
   color: rgb(75, 75, 75);
 }
 .card .card_bottom {
   padding-top: 10px;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(243, 243, 243);
   padding-bottom: 10px;
   padding-top: 10px;
   border: 1px solid #bebebe;
@@ -41,15 +55,6 @@ body {
 }
 
 /*-------------------------------------------------------------- HEADER-------------------------------------------------------------------------*/
-.brandName {
-  color: rgb(255, 255, 255);
-  font-size: 400%;
-  margin-left: 20px;
-  text-align: center;
-  font-family: "Fantasy";
-  font-weight: bold;
-}
-
 a.cancel-button {
   color: rgb(255, 255, 255);
   background-color: #c86262;
@@ -114,7 +119,7 @@ h1 {
   font-weight: bold;
 }
 
-
+/*-------------------------------------------------------------- REGISTER--------------------------------------------------------------------------*/
 /*-------------------------------------------------------------- DISPLAY TABLE--------------------------------------------------------------------------*/
 a.edit-button, a.delete-button {
   background-color: #6290C8;
@@ -124,8 +129,9 @@ a.edit-button, a.delete-button {
   /*-------------------------------------------------------------- NAV BUTTONS--------------------------------------------------------------------------*/
 }
 a.edit-button:hover, a.delete-button:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(197, 197, 197);
   text-decoration: none;
+  background-color: #334f72;
 }
 a.edit-button .loginContainer, a.delete-button .loginContainer {
   padding-top: 20px;
@@ -139,6 +145,14 @@ a.edit-button span.login-button, a.delete-button span.login-button {
 a.edit-button span.login-button:hover, a.delete-button span.login-button:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
+}
+
+.fa-solid {
+  color: white;
+}
+
+.fa-sharp {
+  color: #c86262;
 }
 
 a.green-button, a.blue-button {
@@ -156,14 +170,39 @@ a.green-button:hover, a.blue-button:hover {
 
 /*-------------------------------------------------------------- NAV BAR--------------------------------------------------------------------------*/
 div#navbarBottom {
-  background-color: #6290C8;
+  background-color: #121922;
   border: 1px solid #868686;
 }
 div#navbarBottom li {
   display: inline;
   font-family: sans-serif;
   font-size: 20px;
- 
+}
+div#navbarBottom li .user-icon {
+  color: white;
+}
+div#navbarBottom li .login-nav-button {
+  margin-left: 250px;
+  background-color: rgb(21, 70, 231);
+  border-radius: 8px;
+}
+div#navbarBottom li .login-nav-button:hover {
+  background-color: rgb(17, 52, 168);
+}
+div#navbarBottom li .searchfrom {
+  margin-left: 150px;
+  width: 27%;
+  padding: 5px 24px;
+}
+div#navbarBottom li .searchbutton {
+  background-color: rgb(21, 70, 231);
+  color: rgb(217, 217, 219);
+  outline: none;
+  padding: 5px 24px;
+  border-radius: 8px;
+}
+div#navbarBottom li .searchbutton:hover {
+  background-color: rgb(17, 52, 168);
 }
 div#navbarBottom li a {
   color: rgb(245, 245, 245);
@@ -171,8 +210,7 @@ div#navbarBottom li a {
   padding: 15px;
 }
 div#navbarBottom li a:hover {
-  color: rgb(2, 2, 2);
-  font:bold;
+  color: rgb(204, 144, 144);
 }
 
 /*-------------------------------------------------------------- TOP NAV--------------------------------------------------------------------------*/
@@ -192,18 +230,18 @@ div#navbarTop ul {
 
 /*-------------------------------------------------------------- SIDE NAV--------------------------------------------------------------------------*/
 .sidenav {
-  color: rgb(47, 47, 87);
+  color: rgb(240, 240, 240);
   position: absolute;
   height: 100%;
   width: 20%;
   margin-top: 10px;
   left: 0;
-  background-color: #eaecea;
-  border: 1px solid #c4c3c3;
+  background-color: #fafafa;
+  border-right: 1px solid #cfcfcf;
 }
 .sidenav h2 {
   color: rgb(255, 255, 255);
-  background-color: #6290C8;
+  background-color: #121922;
   text-align: center;
   padding-bottom: 5px;
   border: 1px solid #797979;
@@ -237,13 +275,6 @@ footer {
 }
 
 /*-------------------------------------------------------------- ADD--------------------------------------------------------------------------*/
-
-.page_title{
-  text-align: center;
-  font:bold;
-  font-size: 300%;
-}
-
 form {
   margin-top: 10px;
   background-color: #eaeceb;
@@ -257,7 +288,7 @@ form a.red-button {
   padding: 10px;
 }
 form a.red-button:hover {
-  color: rgb(250, 250, 250);
+  color: rgb(19, 19, 19);
   text-decoration: none;
   font-weight: bold;
 }
@@ -267,50 +298,43 @@ form span.add-button {
   padding: 10px;
 }
 form span.add-button:hover {
-  color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
 }
 
 /*-------------------------------------------------------------- RESPONSIVE--------------------------------------------------------------------------*/
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1740px) {
+  .searchbutton {
+    margin-right: 200px;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .searchbutton {
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 15000px) {
+  .searchbutton {
+    margin-right: 270px;
+  }
+}
+@media screen and (min-width: 15000px) and (max-width: 1050px) {
   .sidenav {
     display: none;
   }
-  .card {
-    float:left;
-    margin-left:50px;
-  }
 }
-
-@media screen and (max-width: 840px) {
-  .card {
-    display: table;
-    align-items: center;
+@media screen and (min-width: 15000px) {
+  .userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .userProfile div {
     text-align: center;
- 
-    width: 100%;
-    margin-bottom: 20px;
-    margin-left:10px;
-    margin-right:10px;
+    margin: 1%;
+    border-radius: 10px;
+    border: 2px solid black;
+    flex-grow: 1;
   }
-}
-
-
-@media screen and (max-width: 425px) {
-  div#navbarBottom {
-    display: none;
-  }
-}
-.userProfile {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.userProfile div {
-  text-align: center;
-  margin: 1%;
-  border-radius: 10px;
-  border: 2px solid black;
-  flex-grow: 1;
 }/*# sourceMappingURL=style.css.map */

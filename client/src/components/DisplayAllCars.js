@@ -51,13 +51,13 @@ export default class DisplayAllCars extends Component
     }
 
     sortByPriceHighToLow(){
-        console.log(this.state.carParts.sort((a, b) => a.price < b.price ?-1:1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => a.price < b.price ?-1:1)} )
+        console.log(this.state.carParts.sort((a, b) => a.price >b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => (b.price - a.price) ?-1:1)} )
     }
 
     sortByPriceLowToHigh(){
-        console.log(this.state.carParts.sort((a, b) => a.price > b.price ?-1:1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => a.price > b.price ?-1:1)} )
+        console.log(this.state.carParts.sort((a, b) => b.price < b.arice ?1:-1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price - b.price ?-1:1)} )
     }
     render() 
     {   
