@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const Item = require('./items.js')
 
 //TODO add regexes to ensure valid data
 
