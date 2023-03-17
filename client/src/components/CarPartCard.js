@@ -14,17 +14,26 @@ export default class CarPartCard extends Component {
 
     addToCart = e => {
         let tempList = []
-        const itemToAdd = {
-            itemId: this.props.part._id
+        let added = false
+        if(localStorage.getItem('cart') !== ""){
+            tempList.push.apply(tempList, JSON.parse(localStorage.getItem('cart')))
         }
-        let currentItems = localStorage.getItem('cart')
-        tempList.push(currentItems)
-        tempList.push(JSON.stringify(itemToAdd))
-        //Taken from https://stackoverflow.com/a/281335
-        tempList = tempList.filter(function (el){
-            return el != null
+
+        tempList.forEach(item =>{
+            if(item.itemId === this.props.part._id){
+                item.quantity++
+                added = true
+            }
         })
-        localStorage.setItem('cart', tempList)
+        if(!added){
+            const toAdd = {
+                itemId: this.props.part._id,
+                itemPrice: this.props.part.price,
+                quantity: 1
+            }
+            tempList.push(toAdd)
+        }
+        localStorage.setItem('cart', JSON.stringify(tempList))
     }
 
     render() {

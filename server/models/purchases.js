@@ -6,8 +6,8 @@ const Item = require('./items.js')
 let itemDataSchema = new mongoose.Schema(
     {
         itemId:{type: String}, 
-        // itemPrice:{type: Number, match:/^\d+$/}, 
-        // quantity:{type:Number, match:/^\d+$/}
+        itemPrice:{type: Number, match:/^\d+$/}, 
+        quantity:{type:Number, match:/^\d+$/}
     }
 )
 

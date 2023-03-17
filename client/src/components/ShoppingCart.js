@@ -10,8 +10,12 @@ export default class ShoppingCart extends Component{
         super(props)
 
         this.state = {
-            items: localStorage.getItem('cart').split(','),
+            items: JSON.parse(localStorage.getItem('cart'))
         }
+    }
+
+    componentDidMount(){
+        console.log(this.state.items)
     }
 
     handleBuy = e => {
