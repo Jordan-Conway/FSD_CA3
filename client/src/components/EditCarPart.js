@@ -18,6 +18,7 @@ export default class EditCarPart extends Component {
             colour: ``,
             price: ``,
             condition: ``,
+            redirectToDisplayAdminTable: false,
             quantity: ``,
             redirectToDisplayAllCars: false
         }

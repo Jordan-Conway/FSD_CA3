@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
-import CarTable from "./CarTable"
+import CarPartBody from "./CarPartBody"
 import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
 
@@ -64,7 +64,7 @@ export default class ShoppingCart extends Component{
                 <Navbar/>
                 </div>
                 <button onClick={this.handleBuy}>Purchase</button>
-                <CarTable isAddable={false} cars={this.state.items} /> 
+                <CarPartBody isAddable={false} cars={this.state.items} /> 
             </>
         )
     }
