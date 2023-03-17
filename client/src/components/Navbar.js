@@ -33,6 +33,11 @@ export default class Navbar extends Component {
                 <i class="fa-sharp fa-solid fa-car"></i>
                 <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
            
+                </li>
+                <li>
+
+                <Link className="blue-button" to={"/ShoppingCart"}><img alt="cart icon" src=""/></Link>  
+                
                 </li>    
                 <li>
                 <i class="fa-sharp fa-solid fa-user"></i>

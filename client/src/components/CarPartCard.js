@@ -31,7 +31,37 @@ export default class CarPartCard extends Component {
     //         })
     //     })
     // }
-    
+    constructor(props){
+        super(props)
+
+        this.state = {
+            addable: this.props.addable
+        }
+    }
+
+    addToCart = e => {
+        let tempList = []
+        let added = false
+        if(localStorage.getItem('cart') !== ""){
+            tempList.push.apply(tempList, JSON.parse(localStorage.getItem('cart')))
+        }
+
+        tempList.forEach(item =>{
+            if(item.itemId === this.props.part._id){
+                item.quantity++
+                added = true
+            }
+        })
+        if(!added){
+            const toAdd = {
+                itemId: this.props.part._id,
+                itemPrice: this.props.part.price,
+                quantity: 1
+            }
+            tempList.push(toAdd)
+        }
+        localStorage.setItem('cart', JSON.stringify(tempList))
+    }
     render() {
         return (
    
@@ -53,6 +83,7 @@ export default class CarPartCard extends Component {
                 </div>
                 
                 <div className="card_bottom">
+                {this.state.addable ? <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button> : null}
                 <Link className="edit-button" to={"/EditCarPart/" + this.props.part._id}>Edit</Link>
                 <Link className="delete-button" to={"/DeleteCarPart/" + this.props.part._id}>Delete</Link>
                 </div>

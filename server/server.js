@@ -14,7 +14,7 @@ app.use(require(`cors`)({credentials: true, origin: process.env.LOCAL_HOST}))
 
 // Routes
 app.use(require(`./routes/carParts.js`))
-
+app.use(require(`./routes/purchases.js`))
 
 
 // Port
