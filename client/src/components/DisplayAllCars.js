@@ -48,16 +48,14 @@ export default class DisplayAllCars extends Component {
         this.setState({ showModal: !this.state.showModal })
     }
 
-    sortByPriceHighToLow() {
-        this.state.carParts = this.state.carPartsReset
-        console.log(this.state.carParts.sort((a, b) => a.price > b.price ? 1 : -1))
-        this.setState({ carParts: this.state.carParts.sort((a, b) => (b.price - a.price)) })
+    sortByPriceHighToLow(){
+        console.log(this.state.carParts.sort((a, b) => a.price >b.price ?-1:1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => (b.price - a.price) ?-1:1)} )
     }
 
-    sortByPriceLowToHigh() {
-        this.state.carParts = this.state.carPartsReset
-        console.log(this.state.carParts.sort((a, b) => a.price < b.price ? 1 : -1))
-        this.setState({ carParts: this.state.carParts.sort((a, b) => (a.price - b.price)) })
+    sortByPriceLowToHigh(){
+        console.log(this.state.carParts.sort((a, b) => b.price < b.arice ?1:-1))
+        this.setState({carParts: this.state.carParts.sort((a, b) => a.price - b.price ?-1:1)} )
     }
     filterByNew() {
         console.log(this.state.carParts);

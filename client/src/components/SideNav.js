@@ -4,7 +4,8 @@ export default class Sidenav extends Component {
   render() {
     return (
       <div id="sidenav">
-          <h2>Sort</h2>
+        
+        
           <nav>
             <div className="navLinks">
               <ul>

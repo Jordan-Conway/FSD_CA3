@@ -22,6 +22,8 @@ export default class AddCarPart extends Component {
             price: "",
             condition: "",
             redirectToDisplayAdminTable: false
+            quantity: "",
+            redirectToDisplayAllCars: false
         }
     }
 
@@ -45,7 +47,8 @@ export default class AddCarPart extends Component {
             material: this.state.material,
             colour: this.state.colour,
             price: this.state.price,
-            condition: this.state.condition
+            condition: this.state.condition,
+            quantity: this.state.quantity
         }
 
         axios.post(`${SERVER_HOST}/carParts`, carObject)
@@ -104,6 +107,11 @@ export default class AddCarPart extends Component {
                     <Form.Group controlId="condition">
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
+                    </Form.Group>
+                    
+                    <Form.Group controlId="quantity">
+                        <Form.Label>Quantity</Form.Label>
+                        <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
                     </Form.Group>
                     <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 

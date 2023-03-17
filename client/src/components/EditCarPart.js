@@ -19,6 +19,8 @@ export default class EditCarPart extends Component {
             price: ``,
             condition: ``,
             redirectToDisplayAdminTable: false
+            quantity: ``,
+            redirectToDisplayAllCars: false
         }
     }
 
@@ -38,7 +40,8 @@ export default class EditCarPart extends Component {
                             material: res.data.material,
                             colour: res.data.colour,
                             price: res.data.price,
-                            condition: res.data.condition
+                            condition: res.data.condition,
+                            quantity: res.data.quantity
                         })
                     }
                 }
@@ -63,7 +66,8 @@ export default class EditCarPart extends Component {
             material: this.state.material,
             colour: this.state.colour,
             price: this.state.price,
-            condition: this.state.condition
+            condition: this.state.condition,
+            quantity: this.state.quantity
         }
 
         axios.put(`${SERVER_HOST}/carParts/${this.props.match.params.id}`, carObject)
@@ -126,6 +130,12 @@ export default class EditCarPart extends Component {
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
                     <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
+
+                    <Form.Group controlId="quantity">
+                        <Form.Label>Quantity</Form.Label>
+                        <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
+                    </Form.Group>
+                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 
                     <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
                 </Form>

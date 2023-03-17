@@ -14,7 +14,8 @@ let carPartsSchema = new mongoose.Schema(
         colour: {type: String},
         price: {type: String},
         photos:[carPhotosSchema],
-        condition: {type: String} 
+        condition: {type: String},
+        quantity: {type: Number} 
    },
    {
        collection: `carParts`

@@ -23,6 +23,7 @@ import Login from "./components/Login"
 
 import {ACCESS_LEVEL_GUEST} from "./config/global_constants"
 import DisplayAdminTable from "./components/DisplayAdminTable"
+import ShoppingCart from "./components/ShoppingCart"
 
 if (typeof localStorage.accessLevel === "undefined")
 {
@@ -32,8 +33,6 @@ if (typeof localStorage.accessLevel === "undefined")
     localStorage.profilePhoto = null
 }
 
-
-    
 export default class App extends Component 
 {
     render() 
@@ -54,6 +53,7 @@ export default class App extends Component
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
                     <Route exact path="/UserProfile" component={UserProfile}/>
                     <Route exact path="/DisplayAdminTable" component={DisplayAdminTable}/>
+                    <Route exact path="/ShoppingCart" component={ShoppingCart} />
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
                     
                     <Route path="*" component={DisplayAllCars}/>                        
