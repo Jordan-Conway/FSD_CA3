@@ -18,7 +18,7 @@ let purchaseSchema = new mongoose.Schema(
         items: [itemDataSchema]
     },
     {
-        collection: `users`
+        collection: `purchases`
     }
 )
 
