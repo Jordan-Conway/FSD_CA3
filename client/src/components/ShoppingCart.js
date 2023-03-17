@@ -36,7 +36,8 @@ export default class ShoppingCart extends Component{
                         this.state.items.forEach(item => {
                             axios.get(`${SERVER_HOST}/carParts/${item.itemId}`)
                             .then(res =>{
-                                let partObject = res.data
+                                if(res.data){
+                                    let partObject = res.data
                                 partObject.quantity -= item.quantity
                                 axios.put(`${SERVER_HOST}/carParts/${item.itemId}`, partObject)
                                 .then(res => {
@@ -44,6 +45,7 @@ export default class ShoppingCart extends Component{
                                         console.log("Success Updating Quantity")
                                     }
                                 })
+                                }
                             })
                         });
                     }
