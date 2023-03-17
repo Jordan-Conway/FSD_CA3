@@ -78,7 +78,7 @@ export default class EditCarPart extends Component {
                     }
                     else {
                         console.log(`Record updated`)
-                        this.setState({ redirectToDisplayAllCars: true })
+                        this.setState({ redirectToDisplayAdminTable: true })
                     }
                 }
                 else {
@@ -94,7 +94,7 @@ export default class EditCarPart extends Component {
             <Navbar Navbar={this.state.Navbar} /> 
             
             <div className="form-container">
-                {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAllCars" /> : null}
+                {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
                 <div className="page_title">
                     Edit Car
                 </div>
@@ -129,6 +129,7 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
+                    <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
 
                     <Form.Group controlId="quantity">
                         <Form.Label>Quantity</Form.Label>
@@ -136,7 +137,7 @@ export default class EditCarPart extends Component {
                     </Form.Group>
                     <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 
-                    <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
+                    <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
                 </Form>
             </div>
             </div>

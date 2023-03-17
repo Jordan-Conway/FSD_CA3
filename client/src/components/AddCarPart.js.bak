@@ -21,9 +21,12 @@ export default class AddCarPart extends Component {
             colour: "",
             price: "",
             condition: "",
-            redirectToDisplayAdminTable: false,
+<<<<<<< HEAD
+            redirectToDisplayAdminTable: false
+=======
             quantity: "",
             redirectToDisplayAllCars: false
+>>>>>>> main
         }
     }
 

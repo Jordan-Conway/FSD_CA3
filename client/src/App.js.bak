@@ -22,8 +22,11 @@ import Login from "./components/Login"
 
 
 import {ACCESS_LEVEL_GUEST} from "./config/global_constants"
+<<<<<<< HEAD
 import DisplayAdminTable from "./components/DisplayAdminTable"
+=======
 import ShoppingCart from "./components/ShoppingCart"
+>>>>>>> main
 
 if (typeof localStorage.accessLevel === "undefined")
 {

@@ -12,7 +12,7 @@ export default class DeleteCarPart extends Component
         super(props)
         
         this.state = {
-            redirectToDisplayAllCars:false
+            redirectToDisplayAdminTable:false
         }
     }
     
@@ -32,7 +32,7 @@ export default class DeleteCarPart extends Component
                 { 
                     console.log("Record deleted")
                 }
-                this.setState({redirectToDisplayAllCars:true})
+                this.setState({redirectToDisplayAdminTable:true})
             }
             else 
             {
@@ -46,7 +46,7 @@ export default class DeleteCarPart extends Component
     {
         return (
             <div>   
-                {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAllCars"/> : null}                      
+                {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable"/> : null}                      
             </div>
         )
     }
