@@ -10,22 +10,20 @@ export default class Sidenav extends Component {
             <div className="navLinks">
               <ul>
                 <li>
-                  <a href="#">Something</a>
+                <button onClick={this.props.filterNew}>Filter By New</button>
                 </li>
                 <li>
-                  <a href="#">Other</a>
+                <button onClick={this.props.filterUsed}>Filter By Used</button>
                 </li>
                 <li>
-                  <a href="#">Link</a>
+                <button onClick={this.props.highLow}>Price: High to Low</button>
                 </li>
                 <li>
-                  <a href="#">Something</a>
+                <button onClick={this.props.lowHigh}>Price: Low to High</button>
                 </li>
                 <li>
-                  <a href="#">Other</a>
+                <button onClick={this.props.filterOther}>Filter By Other</button>
                 </li>
-
-                
               </ul>
             </div>
           </nav>

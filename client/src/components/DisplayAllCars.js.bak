@@ -81,6 +81,7 @@ export default class DisplayAllCars extends Component {
     render() {
         return (
             <div className="navbarBottom">
+<<<<<<< HEAD
                 <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
                 <div className="main-body">
                     <div className="sidenav">
@@ -95,6 +96,30 @@ export default class DisplayAllCars extends Component {
                     <div className="table-container">
                         <CarPartBody cars={this.state.carParts} />
                     </div>
+=======
+            <Navbar Navbar={this.state.Navbar} /> 
+
+            
+      
+
+            <div className="sidenav">
+            <Sidenav Sidenav={this.state.Sidenav} /> 
+            <button onClick={this.handleOnClick}>Sort|Filter</button>
+                    
+                    {this.state.showModal?<SortModal showmodal={this.state.showModal}
+                     closeModal = {this.handleOnClick.bind(this)} 
+                      highLow = {this.sortByPriceHighToLow.bind(this)}
+                        lowHigh = {this.sortByPriceLowToHigh.bind(this)}/>:null}
+                    
+            </div> 
+            
+  
+                    
+            <div className="form-container">
+                
+                <div className="table-container">
+                    <CarTable isAddable={true} cars={this.state.carParts} /> 
+>>>>>>> main
                 </div>
             </div>
         )

@@ -1,54 +1,38 @@
 import React, { Component } from "react"
-import Form from "react-bootstrap/Form"
 import { Redirect, Link } from "react-router-dom"
+import Form from "react-bootstrap/Form"
+
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
+
 import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
 
-export default class EditCarPart extends Component {
+
+export default class AddCarPart extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            name: ``,
-            item_number: ``,
-            material: ``,
-            colour: ``,
-            price: ``,
-            condition: ``,
+            name: "",
+            item_number: "",
+            material: "",
+            colour: "",
+            price: "",
+            condition: "",
+<<<<<<< HEAD
             redirectToDisplayAdminTable: false
-            quantity: ``,
+=======
+            quantity: "",
             redirectToDisplayAllCars: false
+>>>>>>> main
         }
     }
 
+
     componentDidMount() {
         this.inputToFocus.focus()
-
-        axios.get(`${SERVER_HOST}/carParts/${this.props.match.params.id}`)
-            .then(res => {
-                if (res.data) {
-                    if (res.data.errorMessage) {    
-                        console.log(res.data.errorMessage)
-                    }
-                    else {
-                        this.setState({
-                            name: res.data.name,
-                            item_number: res.data.item_number,
-                            material: res.data.material,
-                            colour: res.data.colour,
-                            price: res.data.price,
-                            condition: res.data.condition,
-                            quantity: res.data.quantity
-                        })
-                    }
-                }
-                else {
-                    console.log(`Record not found`)
-                }
-            })
     }
 
 
@@ -70,39 +54,37 @@ export default class EditCarPart extends Component {
             quantity: this.state.quantity
         }
 
-        axios.put(`${SERVER_HOST}/carParts/${this.props.match.params.id}`, carObject)
+        axios.post(`${SERVER_HOST}/carParts`, carObject)
             .then(res => {
                 if (res.data) {
+                    
+                console.log(res.data, "here")
                     if (res.data.errorMessage) {
                         console.log(res.data.errorMessage)
                     }
                     else {
-                        console.log(`Record updated`)
+                        console.log("Record added")
                         this.setState({ redirectToDisplayAdminTable: true })
                     }
                 }
                 else {
-                    console.log(`Record not updated`)
+                    console.log("Record not added")
                 }
             })
     }
-    
-    render() {
-        return (
 
+
+    render() {
+        return (       
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
             
-            <div className="form-container">
                 {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
-                <div className="page_title">
-                    Edit Car
-                </div>
-
+                <div className="addFrom">
                 <Form>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control ref={(input) => { this.inputToFocus = input }} type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
+                        <Form.Control ref={(input) => { this.inputToFocus = input }} type="text" name="name" value={this.state.name} onChange={this.handleChange} />
                     </Form.Group>
 
                     <Form.Group controlId="item_number">
@@ -129,8 +111,7 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
-
+                    
                     <Form.Group controlId="quantity">
                         <Form.Label>Quantity</Form.Label>
                         <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
@@ -140,7 +121,8 @@ export default class EditCarPart extends Component {
                     <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
                 </Form>
             </div>
-            </div>
+        </div>
+    
         )
-    }
+}
 }

@@ -5,6 +5,7 @@ import Search from "./Search";
 export default class Navbar extends Component {
   render() {
     return (
+<<<<<<< HEAD
       <div id="navbarTop">
         <div className="brandName">DealsOnWheels</div>
 
@@ -21,6 +22,8 @@ export default class Navbar extends Component {
           </Link>{" "}
           <br />
         </div>
+=======
+>>>>>>> main
 
         <div id="navbarBottom">
           <nav>
@@ -44,6 +47,7 @@ export default class Navbar extends Component {
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
                   
                 </li>
+<<<<<<< HEAD
                 <li>
                 
                 </li>
@@ -56,10 +60,12 @@ export default class Navbar extends Component {
                 <li>
 
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+=======
 
                 <li>
                 <i class="fa-sharp fa-solid fa-car"></i>
                 <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+>>>>>>> main
            
                 </li>
                 <li>
