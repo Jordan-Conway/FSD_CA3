@@ -1,20 +1,18 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom"
-import Search from "./Search";
 
 export default class Navbar extends Component {
+  handleChange(e){
+    var searchValue = e.target.value;
+    // if(searchValue.lenght != 0){
+      this.props.searchArray(searchValue)
+    // }else{
+      this.props.reset()
+    // }
+  }
   render() {
     return (
       <div id="navbarTop">
-        <div className="brandName">DealsOnWheels</div>
-
-        <input className="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-            <button className="searchbutton" type="submit">Search</button>
-            
-        <input className="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-        <button className="searchbutton" type="submit">Search</button>
-
-
         <div className="login_regester_container">
           <Link className="green-button" to={"/Login"}>
             Login
@@ -27,20 +25,8 @@ export default class Navbar extends Component {
 
         <div id="navbarBottom">
           <nav>
-
-            
-            
-
-
-
             <div className="navLinks">
               <ul>
-                
-             
-
-
-
-
                 <li>
                   <div className="logo">
                     <img src="logo.png" alt="Description of the image">
@@ -51,30 +37,9 @@ export default class Navbar extends Component {
                 <li>
                   <i class="fa-sharp fa-solid fa-house"></i>
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
-
-                </li>
-                <li>
-
-                </li>
-                <li>
-                  <a href="#">Used</a>
-                </li>
-                <li>
-                  <a href="#">New</a>
                 </li>
 
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-
-                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-
-                <li>
-                <i class="fa-sharp fa-solid fa-car"></i>
-                <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-           
-                  <i class="fa-sharp fa-solid fa-car"></i>
-                  <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-
-                </li>
                 <li>
 
                   <Link className="blue-button" to={"/ShoppingCart"}><img alt="cart icon" src="" /></Link>
@@ -87,20 +52,8 @@ export default class Navbar extends Component {
                 </li>
                 <li>
 
-                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-                  <button class="searchbutton" type="submit">Search</button>
+                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
                 </li>
-
-
-                <li>
-
-                  <Link className="login-nav-button" to={"/Login"}>
-                    <i class="fa-solid fa-user"></i> Login
-                  </Link>{" "}
-
-
-                </li>
-
               </ul>
             </div>
           </nav>

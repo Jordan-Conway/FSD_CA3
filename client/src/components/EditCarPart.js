@@ -19,8 +19,7 @@ export default class EditCarPart extends Component {
             price: ``,
             condition: ``,
             redirectToDisplayAdminTable: false,
-            quantity: ``,
-            redirectToDisplayAllCars: false
+            quantity: ``
         }
     }
 
