@@ -33,6 +33,19 @@ export default class ShoppingCart extends Component{
                     }
                     else {
                         console.log("Purchase success")
+                        this.state.items.forEach(item => {
+                            axios.get(`${SERVER_HOST}/carParts/${item.itemId}`)
+                            .then(res =>{
+                                let partObject = res.data
+                                partObject.quantity -= item.quantity
+                                axios.put(`${SERVER_HOST}/carParts/${item.itemId}`, partObject)
+                                .then(res => {
+                                    if(res.data){
+                                        console.log("Success Updating Quantity")
+                                    }
+                                })
+                            })
+                        });
                     }
                 }
                 else{
