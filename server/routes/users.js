@@ -141,5 +141,9 @@ router.post(`/users/logout`, (req,res) =>
     res.json({})
 })
 
+router.get(`/users/:id`, (req, res) =>{
+
+})
+
 
 module.exports = router
