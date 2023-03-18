@@ -2,22 +2,6 @@ body {
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
-=======
-
-.logo {
-  margin-top: -200px;
-  margin-bottom: -200px;
-  margin-left: 33%;
-}
-
-img.img {
-  padding-right: -200px;
-  width: 50%;
-  height: 50%;
-}
-
->>>>>>> main
 .card {
   display: table;
   align-items: center;

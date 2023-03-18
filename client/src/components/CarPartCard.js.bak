@@ -81,15 +81,6 @@ export default class CarPartCard extends Component {
                 <p><div className="card_price">{this.props.part.price}</div></p>
                 <p>Condition:{this.props.part.condition}</p>
                 </div>
-<<<<<<< HEAD
-=======
-                
-                <div className="card_bottom">
-                {this.state.addable ? <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button> : null}
-                <Link className="edit-button" to={"/EditCarPart/" + this.props.part._id}>Edit</Link>
-                <Link className="delete-button" to={"/DeleteCarPart/" + this.props.part._id}>Delete</Link>
-                </div>
->>>>>>> main
             </div>
   
           
