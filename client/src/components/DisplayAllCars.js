@@ -93,25 +93,11 @@ export default class DisplayAllCars extends Component {
                         <button onClick={this.resetArray.bind(this)}>Reset Filters</button>
                     </div>
                     <div className="table-container">
-                        <CarPartBody isAddable={true} cars={this.state.carParts} />
-                    </div>
-                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
-                <div className="main-body">
-                    <div className="sidenav">
-                        <Sidenav Sidenav={this.state.Sidenav}
-                            highLow={this.sortByPriceHighToLow.bind(this)}
-                            lowHigh={this.sortByPriceLowToHigh.bind(this)}
-                            filterNew={this.filterByNew.bind(this)}
-                            filterUsed={this.filterByUsed.bind(this)}
-                            filterOther={this.filterByOther.bind(this)} />
-                        <button onClick={this.resetArray.bind(this)}>Reset Filters</button>
-                    </div>
-                    <div className="table-container">
                         <CarPartBody cars={this.state.carParts} />
                     </div>
                 </div>
             </div>
-            </div>
+        
         )
     }
 }

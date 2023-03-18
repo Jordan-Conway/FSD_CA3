@@ -212,7 +212,7 @@ div#navbarBottom{
   
     .login-nav-button{
   
-margin-left: 250px;
+margin-left: 380px;
 background-color: rgb(21, 70, 231);
 border-radius: 8px;
 &:hover{
@@ -223,7 +223,7 @@ border-radius: 8px;
       
     }
     .searchfrom{
-      margin-left:150px;
+      margin-left:50px;
       width:27%;
       padding: 5px 24px;
 
@@ -231,10 +231,11 @@ border-radius: 8px;
     }
     .searchbutton{
       background-color: rgb(21, 70, 231);
-      color: rgb(217, 217, 219);
+      color: rgb(246, 246, 248);
       outline: none;
       padding: 5px 24px;
       border-radius: 8px;
+      
       &:hover{
         background-color: rgb(17, 52, 168);
         
@@ -249,40 +250,59 @@ border-radius: 8px;
 
     
   &:hover{
-    color:rgb(204, 144, 144);
+    color:rgb(231, 185, 185);
+   
     
         }
       }
     }
 
 }
-/*-------------------------------------------------------------- TOP NAV--------------------------------------------------------------------------*/
-div#navbarTop{
-  left: 0;
-  overflow: hidden;
-  background-color:rgb(8, 8, 49);
-  padding-top:20px;
-  top:0;
-  width:100%;
-  
-  ul{
-    text-align:center;
-    margin:0;
-    padding:15px;
-    }
-  }
+
 /*-------------------------------------------------------------- SIDE NAV--------------------------------------------------------------------------*/
-  .sidenav {
+
+.sidenav {
     color:rgb(240, 240, 240);
     position:absolute;
     height: 100%;
     width: 20%;
-    margin-top:10px;
+    margin-top:15px;
     left: 0;
-    background-color:#fafafa;
-    border-right: 1px solid #cfcfcf;
+    background-color:#f8f8f8;
+    // border-right: 1px solid #b9b9b9;
+ 
    
+   .filterButtons{
+    color:rgb(250, 247, 247);
+    
 
+    .fa-sharp{
+      color: rgb(48, 48, 48);
+      font-size:25px;
+      float:left;
+    }
+    
+    
+    button{
+      margin-top:20px;
+      background-color:#f8f8f8;
+      padding:2%;
+      margin-right:10px;
+      width: 85%;
+      border: 1px solid #f8f8f8;
+      font-size:20px;
+      font-weight: bold;
+      color: rgb(48, 48, 48);
+      border-radius: 8px;
+  
+      &:hover{
+      
+        background-color:#c7c7c7;
+        text-decoration:none;
+        }
+      
+    }
+   }
 
     h2{
       color: rgb(255, 255, 255);

@@ -5,24 +5,11 @@ import Search from "./Search";
 export default class Navbar extends Component {
   render() {
     return (
-      <div id="navbarTop">
-        <div className="brandName">DealsOnWheels</div>
-
-        <input className="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-            <button className="searchbutton" type="submit">Search</button>
-            
-        <input className="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-        <button className="searchbutton" type="submit">Search</button>
-
-
+      <div id="x">
+       
         <div className="login_regester_container">
-          <Link className="green-button" to={"/Login"}>
-            Login
-          </Link>{" "}
-
-          <Link className="blue-button" to={"/Register"}>Register
-          </Link>{" "}
-          <br />
+      
+          
         </div>
 
         <div id="navbarBottom">
@@ -56,36 +43,31 @@ export default class Navbar extends Component {
                 <li>
 
                 </li>
-                <li>
-                  <a href="#">Used</a>
-                </li>
-                <li>
-                  <a href="#">New</a>
-                </li>
-
-                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-
-                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-
+              
                 <li>
                 <i class="fa-sharp fa-solid fa-car"></i>
                 <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
            
-                  <i class="fa-sharp fa-solid fa-car"></i>
-                  <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-
+      
                 </li>
                 <li>
-
-                  <Link className="blue-button" to={"/ShoppingCart"}><img alt="cart icon" src="" /></Link>
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                  <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
 
                 </li>
-                <li>
+                {/* <li>
                   <i class="fa-sharp fa-solid fa-user"></i>
                   <Link className="blue-button" to={"/UserTable"}>User list</Link>
 
-                </li>
+                </li> */}
                 <li>
+                <li>
+                <i class=" fa-sharp fa-solid fa-hammer"></i>
+                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+
+
+                </li>
+         
 
                   <input class="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
                   <button class="searchbutton" type="submit">Search</button>
