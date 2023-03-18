@@ -11,7 +11,6 @@ export default class UserProfile extends Component
             <div className="userProfile">
                 <UserDetails/>
                 <UserPurchases/>
-                <BuyAgain/>
             </div>
         )
     }
