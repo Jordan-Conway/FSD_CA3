@@ -9,7 +9,7 @@ export default class UserProfile extends Component
     {
         return(
             <div className="userProfile">
-                <UserDetails numOfPurchases={0}/>
+                <UserDetails/>
                 <UserPurchases/>
                 <BuyAgain/>
             </div>
