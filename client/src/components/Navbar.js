@@ -2,14 +2,6 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom"
 
 export default class Navbar extends Component {
-  handleChange(e){
-    var searchValue = e.target.value;
-    // if(searchValue.lenght != 0){
-      this.props.searchArray(searchValue)
-    // }else{
-      this.props.reset()
-    // }
-  }
   render() {
     return (
       <div id="navbarTop">
