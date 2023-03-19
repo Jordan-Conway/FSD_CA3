@@ -62,9 +62,8 @@ export default class Navbar extends Component {
                   </li>
                 }
                 <li>
-
+                <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
                   <button className="searchbutton" type="submit">Search</button>
-                  <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
 
                 </li>
                 <li>
