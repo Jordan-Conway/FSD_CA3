@@ -7,10 +7,6 @@ export default class AdminCarPartsTable extends Component {
         return (
             <div className="admin_site">
                 <div>
-                    <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-                    <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
-                </div>
-                <div>
                     <th>Name</th>
                     <th>Item Number</th>
                     <th>Material</th>

@@ -88,10 +88,9 @@ export default class DisplayAllCars extends Component {
     }
     render() {
         return (
+            <div className="adminpage">
             <div className="navbarBottom">
-                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} 
-                            searchArray={this.searchArray.bind(this)}
-                            reset ={this.resetArray.bind(this)}/>
+                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
                 <div className="main-body">
                     <div className="sidenav">
                         <Sidenav Sidenav={this.state.Sidenav}
@@ -103,10 +102,12 @@ export default class DisplayAllCars extends Component {
                         <button onClick={this.resetArray.bind(this)}>Reset Filters</button>
                     </div>
                     <div className="table-container">
-                        <CarPartBody isAddable={true} cars={this.state.carParts} />
+                        <CarPartBody cars={this.state.carParts} />
                     </div>
+                </div>
             </div>
             </div>
+        
         )
     }
 }

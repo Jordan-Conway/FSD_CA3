@@ -1,11 +1,14 @@
 import React, { Component } from "react"
 import Form from "react-bootstrap/Form"
 import { Redirect, Link } from "react-router-dom"
+
 import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
+
 import Navbar from "./Navbar"
 import { SERVER_HOST } from "../config/global_constants"
+
 
 export default class EditCarPart extends Component {
     constructor(props) {
@@ -19,7 +22,8 @@ export default class EditCarPart extends Component {
             price: ``,
             condition: ``,
             redirectToDisplayAdminTable: false,
-            quantity: ``
+            quantity: ``,
+            redirectToDisplayAllCars: false
         }
     }
 
@@ -88,14 +92,13 @@ export default class EditCarPart extends Component {
     
     render() {
         return (
-
             <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar} /> 
+            <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
             
             <div className="form-container">
                 {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
                 <div className="page_title">
-                    Edit Car
+                  <h2>EditCar</h2>
                 </div>
 
                 <Form>
@@ -128,13 +131,13 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    
-
+    
                     <Form.Group controlId="quantity">
                         <Form.Label>Quantity</Form.Label>
                         <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
+                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
+
                     <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
                 </Form>
             </div>

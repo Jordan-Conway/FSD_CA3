@@ -48,23 +48,24 @@ export default class Navbar extends Component {
                 <li>
                   <i className="fa-sharp fa-solid fa-house"></i>
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
-                </li>
-                {
-                  localStorage.accessLevel >= ACCESS_LEVEL_ADMIN ?
-                  <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-                  :
-                  null
-                }
-                <li>
 
+                </li>
+                <li>
+                <i class="fa-sharp fa-solid fa-car"></i>
+                  <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+                  </li>
+                <li>
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                   <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
 
                 </li>
-                {
-                 localStorage.accessLevel > ACCESS_LEVEL_ADMIN ?
+             
+                
+                
+                
                 <li>
-                  <i className="fa-sharp fa-solid fa-user"></i>
-                  <Link className="blue-button" to={"/UserTable"}>User list</Link>
+                <i class=" fa-sharp fa-solid fa-hammer"></i>
+                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
 
                 </li>
                 :
@@ -72,8 +73,17 @@ export default class Navbar extends Component {
                 }
                 <li>
 
+                  <button className="searchbutton" type="submit">Search</button>
                   <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
+
                 </li>
+                <li>
+         
+                
+                <Link className="login-nav-button" to={"/Login"}><i class=" fa-solid fa-user"></i>Login</Link>
+        
+       </li>
+              
               </ul>
             </div>
           </nav>

@@ -38,19 +38,22 @@ export default class CarPartCard extends Component {
         return (
 
             <div className="card">
-                <div className="card_title">{this.props.part.name}</div>
+              
                 <div className="card_information">
+            
+                     
+                <img className="img" src=
+                    {this.props.part.photo} alt="img"/>
 
-
-                    {/* (this.props.part.photo == "" ?{this.props.part.photo.map((photo) => <CarPartIMG photo={photo} />)}: <img className="img" src="https://img.vast.com/usnews/3707326471654947088/1/320x240" alt="img" />) */}
-                    <img className="img" src={this.props.part.photo} alt="img" />
-
-                    <p>Item Number:{this.props.part.item_number}</p>
-
-                    <p>Material:{this.props.part.material}</p>
-                    <p>Colour:{this.props.part.colour}</p>
-                    <p><div className="card_price">{this.props.part.price}</div></p>
-                    <p>Condition:{this.props.part.condition}</p>
+    
+                <div className="card_title">{this.props.part.name}</div>
+                <p><div className="card_price">{this.props.part.price}</div></p>
+                <p>Item Number:{this.props.part.item_number}</p>
+                
+                <p>Material:{this.props.part.material}</p>
+                <p>Colour:{this.props.part.colour}</p>
+                
+                <p>Condition:{this.props.part.condition}</p>
                 </div>
 
                 <div className="card_bottom">

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import AdminCarPartsTable from "./AdminCarPartsTable"
+import Navbar from "./Navbar"
 
 import axios from "axios"
 import {SERVER_HOST} from "../config/global_constants"
@@ -34,8 +35,11 @@ export default class DisplayAdminTable extends Component {
     }
     render() {
         return (
+                      <div className="navbarBottom">
+                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
             <div className="table-container">
                 <AdminCarPartsTable parts={this.state.carParts} />
+            </div>
             </div>
         )
     }
