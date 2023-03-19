@@ -25,11 +25,14 @@ export default class Navbar extends Component {
                 {
                   localStorage.accessLevel >= ACCESS_LEVEL_ADMIN ? 
                   <li>
-                <i class="fa-sharp fa-solid fa-car"></i>
+                  <i class="fa-sharp fa-solid fa-car"></i>
                   <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
                   </li>
                   :
-                  null
+                  <li>
+                  <i class="fa-sharp fa-solid fa-car"></i>
+                  <Link disabled={true} className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+                  </li>
                 }
                 
                 {
@@ -39,7 +42,10 @@ export default class Navbar extends Component {
                   <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
                   </li>
                   :
-                  null
+                  <li>
+                  <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                  <Link disabled={true} className="blue-button" to={"/ShoppingCart"}>Cart</Link>
+                  </li>
                 }
                 
           
@@ -50,7 +56,10 @@ export default class Navbar extends Component {
                   <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
                   </li>
                   :
-                  null
+                  <li>
+                  <i class=" fa-sharp fa-solid fa-hammer"></i>
+                  <Link disbaled={true} className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+                  </li>
                 }
                 <li>
 
