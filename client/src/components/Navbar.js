@@ -1,17 +1,36 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom"
+import { ACCESS_LEVEL_GUEST } from "../config/global_constants";
 
 export default class Navbar extends Component {
   render() {
     return (
       <div id="navbarTop">
         <div className="login_regester_container">
+        {
+          localStorage.accessLevel > ACCESS_LEVEL_GUEST ? 
+          <Link className="red-button" to={"/Logout"}>
+            Logout
+          </Link>
+          :
+          null
+        }
+        {
+          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
           <Link className="green-button" to={"/Login"}>
             Login
-          </Link>{" "}
-
-          <Link className="blue-button" to={"/Register"}>Register
-          </Link>{" "}
+          </Link>
+          :
+          null
+        }
+        {
+          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
+          <Link className="blue-button" to={"/Register"}>
+            Register
+          </Link>
+          :
+          null
+        }
           <br />
         </div>
 
