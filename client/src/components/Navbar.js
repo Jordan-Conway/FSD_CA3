@@ -27,7 +27,7 @@ export default class Navbar extends Component {
 
                 </li>
                 <li>
-                  <i class="fa-sharp fa-solid fa-house"></i>
+                  <i className="fa-sharp fa-solid fa-house"></i>
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
                 </li>
 
@@ -38,13 +38,13 @@ export default class Navbar extends Component {
 
                 </li>
                 <li>
-                  <i class="fa-sharp fa-solid fa-user"></i>
+                  <i className="fa-sharp fa-solid fa-user"></i>
                   <Link className="blue-button" to={"/UserTable"}>User list</Link>
 
                 </li>
                 <li>
 
-                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
+                  <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
                 </li>
               </ul>
             </div>
