@@ -93,7 +93,6 @@ export default class EditCarPart extends Component {
     render() {
         return (
             <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
             
             <div className="form-container">
                 {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
