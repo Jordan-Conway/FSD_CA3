@@ -30,7 +30,7 @@ export default class Navbar extends Component {
                   </li>
                   :
                   <li>
-                  <i class="fa-sharp fa-solid fa-car"></i>
+                  <i className="fa-sharp fa-solid fa-car"></i>
                   <Link disabled={true} className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
                   </li>
                 }
@@ -38,7 +38,7 @@ export default class Navbar extends Component {
                 {
                   localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
                   <li>
-                  <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                  <i className="fa-sharp fa-solid fa-cart-shopping"></i>
                   <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
                   </li>
                   :
@@ -52,13 +52,13 @@ export default class Navbar extends Component {
                 {
                   localStorage.accessLevel >= ACCESS_LEVEL_ADMIN ?
                   <li>
-                  <i class=" fa-sharp fa-solid fa-hammer"></i>
+                  <i className=" fa-sharp fa-solid fa-hammer"></i>
                   <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
                   </li>
                   :
                   <li>
-                  <i class=" fa-sharp fa-solid fa-hammer"></i>
-                  <Link disbaled={true} className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+                  <i className=" fa-sharp fa-solid fa-hammer"></i>
+                  <Link disabled={true} className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
                   </li>
                 }
                 <li>
@@ -69,10 +69,10 @@ export default class Navbar extends Component {
                 <li>
                 
                 {
-localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
-<Link className="login-nav-button" to={"/Login"}><i class=" fa-solid fa-user"></i>Login</Link>
-:
-<Link className="login-nav-button" to={"/Logout"}><i class=" fa-solid fa-user"></i>Logout</Link>
+                  localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
+                  <Link className="login-nav-button" to={"/Login"}><i className=" fa-solid fa-user"></i>Login</Link>
+                  :
+                  <Link className="login-nav-button" to={"/Logout"}><i className=" fa-solid fa-user"></i>Logout</Link>
                 }
                 
        </li>
