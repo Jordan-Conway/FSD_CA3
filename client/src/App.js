@@ -10,7 +10,6 @@ import Navbar from "./components/Navbar"
 import Sidenav from "./components/SideNav"
 import EditCarPart from "./components/EditCarPart"
 import DeleteCarPart from "./components/DeleteCarPart"
-import UserProfile from "./components/UserProfile"
 import AddCarPart from "./components/AddCarPart"
 import UserTable from "./components/UserTable"
 
@@ -52,7 +51,7 @@ export default class App extends Component
                 <Route exact path="/AddCarPart" component={AddCarPart} />
                     <Route exact path="/EditCarPart/:id" component={EditCarPart} />
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
-                    <Route exact path="/UserProfile" component={UserProfile}/>
+    
                     <Route exact path="/DisplayAdminTable" component={DisplayAdminTable}/>
                     <Route exact path="/ShoppingCart" component={ShoppingCart} />
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}

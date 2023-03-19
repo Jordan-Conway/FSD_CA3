@@ -4,13 +4,7 @@ import {Link} from "react-router-dom"
 export default class Navbar extends Component {
   render() {
     return (
-      <div id="x">
-       
-        <div className="login_regester_container">
-      
-          
-        </div>
-
+      <div id="navbarTop">
         <div id="navbarBottom">
           <nav>
             <div className="navLinks">
@@ -27,15 +21,12 @@ export default class Navbar extends Component {
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
 
                 </li>
-                <li>
-
-                </li>
               
                 <li>
-                <i class="fa-sharp fa-solid fa-car"></i>
-                <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
-           
-      
+            
+                  <i class="fa-sharp fa-solid fa-car"></i>
+                  <Link className="blue-button" to={"/AddCarPart"}>Add New Car</Link>
+
                 </li>
                 <li>
                 <i class="fa-sharp fa-solid fa-cart-shopping"></i>
@@ -54,20 +45,18 @@ export default class Navbar extends Component {
 
 
                 </li>
-                <li>
+         
 
-                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
-                  <button class="searchbutton" type="submit">Search</button>
+                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
+                  <button className="searchbutton" type="submit">Search</button>
                 </li>
-
-
                 <li>
-                <i class=" fa-sharp fa-solid fa-hammer"></i>
-                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
-
-
-                </li>
-
+         
+                
+                <Link className="login-nav-button" to={"/Login"}><i class=" fa-solid fa-user"></i>Login</Link>
+        
+       </li>
+              
               </ul>
             </div>
           </nav>
@@ -75,5 +64,4 @@ export default class Navbar extends Component {
       </div>
     )
   }
-  
 }

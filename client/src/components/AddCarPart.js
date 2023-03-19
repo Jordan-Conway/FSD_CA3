@@ -76,7 +76,7 @@ export default class AddCarPart extends Component {
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
             
-                {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAdminTable" /> : null}
+                {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
                 <div className="addFrom">
                     <Form>
                         <Form.Group controlId="name">
@@ -115,7 +115,7 @@ export default class AddCarPart extends Component {
                         </Form.Group>
                         <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 
-                    <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
+                    <Link className="red-button" to={"/DisplayCarTable"}>Cancel</Link>
                 </Form>
             </div>
         </div>
