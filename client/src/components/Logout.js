@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import {Redirect} from "react-router-dom"
 import axios from "axios"
 
-import LinkInClass from "../components/LinkInClass"
+import { ACCESS_LEVEL_GUEST } from "../config/global_constants"
 import {SERVER_HOST} from "../config/global_constants"
 
 
@@ -17,11 +17,11 @@ export default class Logout extends Component
         }
     }
     
-    
-    handleSubmit = (e) => 
-    {
-        e.preventDefault()
-        
+    componentDidMount(){
+        this.logout()
+    }
+
+    logout = () => {
         axios.post(`${SERVER_HOST}/users/logout`)
         .then(res => 
         {     
@@ -34,7 +34,8 @@ export default class Logout extends Component
                 else
                 { 
                     console.log("User logged out")
-                    localStorage.clear() 
+                    localStorage.clear()
+                    localStorage.accessLevel =  ACCESS_LEVEL_GUEST
                     
                     this.setState({isLoggedIn:false}) 
                 }
@@ -52,9 +53,7 @@ export default class Logout extends Component
         return (
             <div>   
         
-                {!this.state.isLoggedIn ? <Redirect to="/DisplayAllCars"/> : null} 
-                  
-                <LinkInClass value="Log out" className="red-button" onClick={this.handleSubmit}/> 
+                {!this.state.isLoggedIn ? <Redirect to="/DisplayAllCars"/> : null}
             </div>
         )
     }
