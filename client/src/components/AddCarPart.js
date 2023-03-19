@@ -43,6 +43,7 @@ export default class AddCarPart extends Component {
 
         const carObject = {
             name: this.state.name,
+            photo: "https://img.vast.com/usnews/3707326471654947088/1/320x240",
             item_number: this.state.item_number,
             material: this.state.material,
             colour: this.state.colour,
@@ -54,8 +55,8 @@ export default class AddCarPart extends Component {
         axios.post(`${SERVER_HOST}/carParts`, carObject)
             .then(res => {
                 if (res.data) {
-                    
-                console.log(res.data, "here")
+
+                    console.log(res.data, "here")
                     if (res.data.errorMessage) {
                         console.log(res.data.errorMessage)
                     }
@@ -72,54 +73,54 @@ export default class AddCarPart extends Component {
 
 
     render() {
-        return (       
+        return (
             <div className="navbarBottom">
-            <Navbar Navbar={this.state.Navbar} /> 
-            
+                <Navbar Navbar={this.state.Navbar} />
+
                 {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
                 <div className="addFrom">
-                <Form>
-                    <Form.Group controlId="name">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control ref={(input) => { this.inputToFocus = input }} type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                    </Form.Group>
+                    <Form>
+                        <Form.Group controlId="name">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control ref={(input) => { this.inputToFocus = input }} type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="item_number">
-                        <Form.Label>Item Number</Form.Label>
-                        <Form.Control type="text" name="item_number" value={this.state.item_number} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="item_number">
+                            <Form.Label>Item Number</Form.Label>
+                            <Form.Control type="text" name="item_number" value={this.state.item_number} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="material">
-                        <Form.Label>Material</Form.Label>
-                        <Form.Control type="text" name="material" value={this.state.material} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="material">
+                            <Form.Label>Material</Form.Label>
+                            <Form.Control type="text" name="material" value={this.state.material} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="colour">
-                        <Form.Label>Colour</Form.Label>
-                        <Form.Control type="text" name="colour" value={this.state.colour} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="colour">
+                            <Form.Label>Colour</Form.Label>
+                            <Form.Control type="text" name="colour" value={this.state.colour} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="price">
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control type="text" name="price" value={this.state.price} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="price">
+                            <Form.Label>Price</Form.Label>
+                            <Form.Control type="text" name="price" value={this.state.price} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="condition">
-                        <Form.Label>Condition</Form.Label>
-                        <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
-                    </Form.Group>
-                    
-                    <Form.Group controlId="quantity">
-                        <Form.Label>Quantity</Form.Label>
-                        <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
-                    </Form.Group>
-                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
+                        <Form.Group controlId="condition">
+                            <Form.Label>Condition</Form.Label>
+                            <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
-                </Form>
+                        <Form.Group controlId="quantity">
+                            <Form.Label>Quantity</Form.Label>
+                            <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
+                        </Form.Group>
+                        <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
+
+                        <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
+                    </Form>
+                </div>
             </div>
-        </div>
-    
+
         )
-}
+    }
 }

@@ -2,7 +2,7 @@ const mongoose = require(`mongoose`)
 
 let carPhotosSchema = new mongoose.Schema(
     {
-       filename:{type:String}
+       filename:{type:String,default:"https://img.vast.com/usnews/3707326471654947088/1/320x240"}
     })
 
 

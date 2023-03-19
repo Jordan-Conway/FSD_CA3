@@ -12,7 +12,7 @@ import EditCarPart from "./components/EditCarPart"
 import DeleteCarPart from "./components/DeleteCarPart"
 import UserProfile from "./components/UserProfile"
 import AddCarPart from "./components/AddCarPart"
-import AdminCarPartsTable from "./components/AdminCarPartsTable"
+import UserTable from "./components/UserTable"
 
 // import ResetDatabase from "./components/ResetDatabase"
 
@@ -45,6 +45,7 @@ export default class App extends Component
                 <Switch>
                 <Route exact path="/" component={DisplayAllCars} />
                 <Route exact path="/Navbar" component={Navbar} />
+                <Route exact path="/UserTable" component={UserTable} />
                 <Route exact path="/Sidenav" component={Sidenav} />
                 <Route exact path="/Register" component={Register} />
                 <Route exact path="/Login" component={Login} />
