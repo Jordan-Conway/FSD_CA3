@@ -49,13 +49,15 @@ export default class DisplayAllCars extends Component {
     }
 
     sortByPriceHighToLow(){
-        console.log(this.state.carParts.sort((a, b) => a.price >b.price ?-1:1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => (b.price - a.price) ?-1:1)} )
+        let sortedDataHL;
+        sortedDataHL = this.state.carParts.sort((a,b) => (b.price - a.price))
+        this.setState({carParts: sortedDataHL} )
     }
 
     sortByPriceLowToHigh(){
-        console.log(this.state.carParts.sort((a, b) => b.price < b.arice ?1:-1))
-        this.setState({carParts: this.state.carParts.sort((a, b) => a.price - b.price ?-1:1)} )
+        let sortedDataLH;
+        sortedDataLH = this.state.carParts.sort((a,b) => (a.price - b.price))
+        this.setState({carParts: sortedDataLH} )
     }
     filterByNew() {
         console.log(this.state.carParts);
@@ -78,10 +80,18 @@ export default class DisplayAllCars extends Component {
         this.setState({ carParts: this.state.carPartsReset });
         console.log(this.state.carParts);
     }
+
+    searchArray(e){
+        console.log(e.target.value)
+            this.state.carParts = this.state.carPartsReset;
+            this.setState({carParts:this.state.carParts.filter((part) => part.name.toLowerCase().includes(e.target.value.toLowerCase()))})
+    }
     render() {
         return (
             <div className="navbarBottom">
-                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
+                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} 
+                            searchArray={this.searchArray.bind(this)}
+                            reset ={this.resetArray.bind(this)}/>
                 <div className="main-body">
                     <div className="sidenav">
                         <Sidenav Sidenav={this.state.Sidenav}
@@ -95,21 +105,6 @@ export default class DisplayAllCars extends Component {
                     <div className="table-container">
                         <CarPartBody isAddable={true} cars={this.state.carParts} />
                     </div>
-                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
-                <div className="main-body">
-                    <div className="sidenav">
-                        <Sidenav Sidenav={this.state.Sidenav}
-                            highLow={this.sortByPriceHighToLow.bind(this)}
-                            lowHigh={this.sortByPriceLowToHigh.bind(this)}
-                            filterNew={this.filterByNew.bind(this)}
-                            filterUsed={this.filterByUsed.bind(this)}
-                            filterOther={this.filterByOther.bind(this)} />
-                        <button onClick={this.resetArray.bind(this)}>Reset Filters</button>
-                    </div>
-                    <div className="table-container">
-                        <CarPartBody cars={this.state.carParts} />
-                    </div>
-                </div>
             </div>
             </div>
         )
