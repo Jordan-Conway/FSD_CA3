@@ -6,34 +6,6 @@ export default class Navbar extends Component {
   render() {
     return (
       <div id="navbarTop">
-        <div className="login_regester_container">
-        {
-          localStorage.accessLevel > ACCESS_LEVEL_GUEST ? 
-          <Link className="red-button" to={"/Logout"}>
-            Logout
-          </Link>
-          :
-          null
-        }
-        {
-          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
-          <Link className="green-button" to={"/Login"}>
-            Login
-          </Link>
-          :
-          null
-        }
-        {
-          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
-          <Link className="blue-button" to={"/Register"}>
-            Register
-          </Link>
-          :
-          null
-        }
-          <br />
-        </div>
-
         <div id="navbarBottom">
           <nav>
             <div className="navLinks">
@@ -87,10 +59,14 @@ export default class Navbar extends Component {
 
                 </li>
                 <li>
-         
                 
-                <Link className="login-nav-button" to={"/Login"}><i class=" fa-solid fa-user"></i>Login</Link>
-        
+                {
+localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
+<Link className="login-nav-button" to={"/Login"}><i class=" fa-solid fa-user"></i>Login</Link>
+:
+<Link className="login-nav-button" to={"/Logout"}><i class=" fa-solid fa-user"></i>Logout</Link>
+                }
+                
        </li>
               
               </ul>
