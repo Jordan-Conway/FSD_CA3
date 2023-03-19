@@ -69,7 +69,7 @@ export default class Navbar extends Component {
                 <li>
                 
                 {
-                  localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
+                  localStorage.accessLevel = ACCESS_LEVEL_GUEST ?
                   <Link className="login-nav-button" to={"/Login"}><i className=" fa-solid fa-user"></i>Login</Link>
                   :
                   <Link className="login-nav-button" to={"/Logout"}><i className=" fa-solid fa-user"></i>Logout</Link>

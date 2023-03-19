@@ -65,7 +65,7 @@ export default class Login extends Component
         return (
             <div className="Login">
                 <h1>DealsOnWheels.com</h1>
-                <div classname="login-background">
+                <div className="login-background">
 
         
             <form className="login-container" noValidate = {true} id = "loginOrRegistrationForm">
