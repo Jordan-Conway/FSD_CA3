@@ -78,6 +78,32 @@ router.post(`/users/register/:name/:email/:password`, upload.single("profilePhot
                     {
                         if(data)
                         {
+                            //Taken from https://www.w3schools.com/nodejs/nodejs_email.asp
+                            const nodemailer = require('nodemailer')
+                            let transporter = nodemailer.createTransport({
+                                service: 'gmail',
+                                auth: {
+                                    user: 'emailsenderfsd@gmail.com',
+                                    pass: 'Test#1234'
+                                }
+                            })
+
+                            let mailOptions = {
+                                from: 'emailsenderfsd@gmail.com',
+                                to: data.email,
+                                subject: "Welcome to Deals On Wheels",
+                                text: "Welcome to Deals on Wheels"
+                            }
+
+                            transporter.sendMail(mailOptions, function(error, info){
+                                if(error){
+                                    console.log(error)
+                                }
+                                else{
+                                    console.log("Sent: " + info.respones)
+                                }
+                            })
+
                             const token = jwt.sign({email: data.email, accessLevel:data.accessLevel}, JWT_PRIVATE_KEY, {algorithm: 'HS256', expiresIn:process.env.JWT_EXPIRY})     
                             
                             fs.readFile(`${process.env.UPLOADED_FILES_FOLDER}/${req.file.filename}`, 'base64', (err, fileData) => 
