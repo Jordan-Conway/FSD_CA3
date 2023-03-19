@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom"
-import { ACCESS_LEVEL_GUEST } from "../config/global_constants";
+import { ACCESS_LEVEL_ADMIN, ACCESS_LEVEL_GUEST } from "../config/global_constants";
 
 export default class Navbar extends Component {
   render() {
@@ -49,15 +49,19 @@ export default class Navbar extends Component {
                   <i className="fa-sharp fa-solid fa-house"></i>
                   <Link className="blue-button" to={"/DisplayAllCars"}>Home</Link>
                 </li>
-
-                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+                {
+                  localStorage.accessLevel >= ACCESS_LEVEL_ADMIN ?
+                  <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
+                  :
+                  null
+                }
                 <li>
 
                   <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
 
                 </li>
                 {
-                 localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
+                 localStorage.accessLevel > ACCESS_LEVEL_ADMIN ?
                 <li>
                   <i className="fa-sharp fa-solid fa-user"></i>
                   <Link className="blue-button" to={"/UserTable"}>User list</Link>

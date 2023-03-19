@@ -324,17 +324,19 @@ form span.add-button:hover {
     display: none;
   }
 }
-@media screen and (min-width: 15000px) {
-  .userProfile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .userProfile div {
-    text-align: center;
-    margin: 1%;
-    border-radius: 10px;
-    border: 2px solid black;
-    flex-grow: 1;
-  }
+.userProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.userProfile div {
+  text-align: center;
+  margin: 1%;
+  border-radius: 10px;
+  border: 2px solid black;
+  flex-grow: 1;
+}
+.userProfile div img {
+  max-width: 40%;
+  max-height: 40%;
 }/*# sourceMappingURL=style.css.map */
