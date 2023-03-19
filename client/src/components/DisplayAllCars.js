@@ -90,7 +90,7 @@ export default class DisplayAllCars extends Component {
         return (
             <div className="adminpage">
             <div className="navbarBottom">
-                <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
+                <Navbar Navbar={this.state.Navbar} searchArray={this.searchArray.bind(this)} cars={this.state.carParts} />
                 <div className="main-body">
                     <div className="sidenav">
                         <Sidenav Sidenav={this.state.Sidenav}
