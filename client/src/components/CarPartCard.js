@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import { ACCESS_LEVEL_GUEST } from "../config/global_constants"
 
 export default class CarPartCard extends Component {
     constructor(props) {
@@ -52,7 +54,7 @@ export default class CarPartCard extends Component {
                 </div>
 
                 <div className="card_bottom">
-                    {this.state.addable ? <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button> : null}
+                    {localStorage.accessLevl > ACCESS_LEVEL_GUEST ? <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button> : <button className="add-to-cart-button"><Link to={"/Login"}>Add to Cart</Link></button>}
                 </div>
             </div>
 
