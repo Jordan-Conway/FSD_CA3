@@ -27,7 +27,8 @@ let userSchema = new mongoose.Schema(
         shippingAddress:[shippingAddressSchema],
         phoneNumber:{type: Number},
         purchaseIds:[purchaseSchema],
-        profilePhotoFilename: {type:String, default:""}
+        profilePhotoFilename: {type:String, default:""},
+        accessLevel:{type: Number}
     },
     {
         collection: `users`

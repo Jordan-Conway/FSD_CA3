@@ -827,12 +827,18 @@ form span.add-button:hover {
   div#navbarBottom li .searchfrom {
     display: none;
   }
-  div#navbarBottom li .searchbutton {
-    display: none;
+}
+@media screen and (min-width: 15000px) {
+  .userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  .card {
-    margin-top: 280px;
-    width: 100%;
-    height: 200px;
+  .userProfile div {
+    text-align: center;
+    margin: 1%;
+    border-radius: 10px;
+    border: 2px solid black;
+    flex-grow: 1;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,6 @@ import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
 import {SERVER_HOST} from "../config/global_constants"
-import {ACCESS_LEVEL_NORMAL_USER} from "../config/global_constants"
 
 
 export default class Login extends Component
@@ -44,7 +43,7 @@ export default class Login extends Component
                     console.log(res.data)
                     localStorage.id = res.data.data._id
                     localStorage.name = res.data.data.name
-                    localStorage.accessLevel = ACCESS_LEVEL_NORMAL_USER
+                    localStorage.accessLevel = res.data.data.accessLevel
                     localStorage.profilePhoto = res.data.data.profilePhoto
                     localStorage.joinDate = res.data.data.joinDate                        
                     localStorage.token = res.data.token

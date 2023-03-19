@@ -16,7 +16,7 @@ import UserTable from "./components/UserTable"
 // import ResetDatabase from "./components/ResetDatabase"
 
 import Login from "./components/Login"
-// import Logout from "./components/Logout"
+import Logout from "./components/Logout"
 // import LoggedInRoute from "./components/LoggedInRoute"
 
 
@@ -49,9 +49,10 @@ export default class App extends Component
                 <Route exact path="/Register" component={Register} />
                 <Route exact path="/Login" component={Login} />
                 <Route exact path="/AddCarPart" component={AddCarPart} />
+                <Route exact path="/Logout" component={Logout} />
                     <Route exact path="/EditCarPart/:id" component={EditCarPart} />
                     <Route exact path="/DeleteCarPart/:id" component={DeleteCarPart} />
-    
+            
                     <Route exact path="/DisplayAdminTable" component={DisplayAdminTable}/>
                     <Route exact path="/ShoppingCart" component={ShoppingCart} />
                     {/* <Route exact path="/ResetDatabase" component={ResetDatabase} />                     */}
