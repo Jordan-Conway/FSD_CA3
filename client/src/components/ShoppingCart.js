@@ -15,7 +15,11 @@ export default class ShoppingCart extends Component{
     }
 
     componentDidMount(){
-        console.log(this.state.items)
+        
+        this.state.items.forEach(item =>{
+            item.itemPrice = item.itemPrice.split("€")
+            console.log(item)
+        })
     }
 
     handleBuy = e => {
@@ -34,6 +38,7 @@ export default class ShoppingCart extends Component{
                     }
                     else {
                         console.log("Purchase success")
+                        localStorage.setItem('cart', [])
                         this.state.items.forEach(item => {
                             axios.get(`${SERVER_HOST}/carParts/${item.itemId}`)
                             .then(res =>{
@@ -69,13 +74,13 @@ export default class ShoppingCart extends Component{
                     
               
                 <h3>Your Shopping Cart</h3>
-                <button onClick={this.handleBuy}>Purchase</button>
                 {
                     this.state.items !== null ? 
                     <CarPartBody isAddable={false} cars={this.state.items} /> 
                     :
                     null
                 }
+                <button onClick={this.handleBuy}>Purchase</button>
                 </div>
             </>  
         )
