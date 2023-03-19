@@ -53,14 +53,19 @@ export default class Navbar extends Component {
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
                 <li>
 
-                  <Link className="blue-button" to={"/ShoppingCart"}><img alt="cart icon" src="" /></Link>
+                  <Link className="blue-button" to={"/ShoppingCart"}>Cart</Link>
 
                 </li>
+                {
+                 localStorage.accessLevel > ACCESS_LEVEL_GUEST ?
                 <li>
                   <i className="fa-sharp fa-solid fa-user"></i>
                   <Link className="blue-button" to={"/UserTable"}>User list</Link>
 
                 </li>
+                :
+                null
+                }
                 <li>
 
                   <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
