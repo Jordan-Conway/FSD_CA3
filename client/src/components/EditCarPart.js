@@ -19,8 +19,7 @@ export default class EditCarPart extends Component {
             price: ``,
             condition: ``,
             redirectToDisplayAdminTable: false,
-            quantity: ``,
-            redirectToDisplayAllCars: false
+            quantity: ``
         }
     }
 
@@ -129,6 +128,7 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
+                    
                     
 
                     <Form.Group controlId="quantity">

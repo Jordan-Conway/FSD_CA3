@@ -110,15 +110,8 @@ router.post(`/users/login/:email/:password`, (req,res) =>
                     const token = jwt.sign({email: data.email, accessLevel:data.accessLevel}, JWT_PRIVATE_KEY, {algorithm: 'HS256', expiresIn:process.env.JWT_EXPIRY})     
 
                     fs.readFile(`${process.env.UPLOADED_FILES_FOLDER}/${data.profilePhotoFilename}`, 'base64', (err, fileData) => 
-                    {        
-                        if(fileData)
-                        {  
-                            res.json({name: data.name, accessLevel:data.accessLevel, profilePhoto:fileData, token:token})                           
-                        }   
-                        else
-                        {
-                            res.json({name: data.name, accessLevel:data.accessLevel, profilePhoto:null, token:token})  
-                        }
+                    {   
+                        res.json({data:data, token:token})
                     })                                                             
                 }
                 else
@@ -139,6 +132,12 @@ router.post(`/users/login/:email/:password`, (req,res) =>
 router.post(`/users/logout`, (req,res) => 
 {       
     res.json({})
+})
+
+router.get(`/users/:id`, (req, res) =>{
+    usersModel.findById(req.params.id), (error, data) =>{
+        res.json(data)
+    }
 })
 
 

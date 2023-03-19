@@ -11,4 +11,10 @@ router.post(`/purchase`, (req, res) => {
     })
 })
 
+router.get(`/purchases/:id`, (req, res) =>{
+    purchaseModelSchema.find({_id: req.params._id}, (error, data) =>{
+        res.json(data)
+    }) 
+})
+
 module.exports = router

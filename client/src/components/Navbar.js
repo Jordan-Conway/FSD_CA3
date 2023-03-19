@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom"
-import Search from "./Search";
 
 export default class Navbar extends Component {
   render() {
@@ -14,20 +13,8 @@ export default class Navbar extends Component {
 
         <div id="navbarBottom">
           <nav>
-
-            
-            
-
-
-
             <div className="navLinks">
               <ul>
-                
-             
-
-
-
-
                 <li>
                   <div className="logo">
                     <img src="logo.png" alt="Description of the image">
@@ -67,7 +54,7 @@ export default class Navbar extends Component {
 
 
                 </li>
-         
+                <li>
 
                   <input class="searchfrom" type="search" placeholder="Search" aria-label="Search"></input>
                   <button class="searchbutton" type="submit">Search</button>
@@ -75,10 +62,8 @@ export default class Navbar extends Component {
 
 
                 <li>
-
-                  <Link className="login-nav-button" to={"/Login"}>
-                    <i class="fa-solid fa-user"></i> Login
-                  </Link>{" "}
+                <i class=" fa-sharp fa-solid fa-hammer"></i>
+                <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
 
 
                 </li>
@@ -90,4 +75,5 @@ export default class Navbar extends Component {
       </div>
     )
   }
+  
 }

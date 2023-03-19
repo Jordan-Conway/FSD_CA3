@@ -1,37 +1,13 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 
+import CarPartIMG from "./CarPartIMG"
 import axios from "axios"
-import {SERVER_HOST} from "../config/global_constants"
+import { SERVER_HOST } from "../config/global_constants"
+
 
 export default class CarPartCard extends Component {
-
-    // componentDidMount() 
-    // {
-    //     this.props.carParts.photos.map(photo => 
-    //     {
-    //         return axios.get(`${SERVER_HOST}/carParts/photos/${photo.filename}`)
-    //         .then(res => 
-    //         {
-    //             if(res.data)
-    //             {            
-    //                 if (res.data.errorMessage)
-    //                 {
-    //                     console.log(res.data.errorMessage)    
-    //                 }
-    //                 else
-    //                 {           
-    //                     document.getElementById(photo._id).src = `data:;base64,${res.data.image}`                                                         
-    //                 }   
-    //             }
-    //             else
-    //             {
-    //                 console.log("Record not found")
-    //             }
-    //         })
-    //     })
-    // }
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -42,17 +18,17 @@ export default class CarPartCard extends Component {
     addToCart = e => {
         let tempList = []
         let added = false
-        if(localStorage.getItem('cart') !== ""){
+        if (localStorage.getItem('cart') !== "") {
             tempList.push.apply(tempList, JSON.parse(localStorage.getItem('cart')))
         }
 
-        tempList.forEach(item =>{
-            if(item.itemId === this.props.part._id){
+        tempList.forEach(item => {
+            if (item.itemId === this.props.part._id) {
                 item.quantity++
                 added = true
             }
         })
-        if(!added){
+        if (!added) {
             const toAdd = {
                 itemId: this.props.part._id,
                 itemPrice: this.props.part.price,
@@ -64,7 +40,7 @@ export default class CarPartCard extends Component {
     }
     render() {
         return (
-   
+
             <div className="card">
               
                 <div className="card_information">
@@ -83,14 +59,14 @@ export default class CarPartCard extends Component {
                 
                 <p>Condition:{this.props.part.condition}</p>
                 </div>
-                
+
                 <div className="card_bottom">
                 {this.state.addable ? <button className="add-to-cart-button" onClick={this.addToCart}>Add to Cart</button> : null}
                 </div>
             </div>
-  
-          
-        
+
+
+
         )
     }
 }
