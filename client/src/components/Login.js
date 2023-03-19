@@ -4,7 +4,6 @@ import axios from "axios"
 
 import LinkInClass from "../components/LinkInClass"
 import {SERVER_HOST} from "../config/global_constants"
-import {ACCESS_LEVEL_NORMAL_USER} from "../config/global_constants"
 
 
 export default class Login extends Component
