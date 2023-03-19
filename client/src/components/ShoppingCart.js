@@ -70,7 +70,12 @@ export default class ShoppingCart extends Component{
               
                 <h3>Your Shopping Cart</h3><CarPartBody isAddable={false} cars={this.state.items} /> 
                 <button onClick={this.handleBuy}>Purchase</button>
-                </div>
+                {
+                    this.state.items !== null ? 
+                    <CarPartBody isAddable={false} cars={this.state.items} /> 
+                    :
+                    null
+                }
             </>
         )
     }

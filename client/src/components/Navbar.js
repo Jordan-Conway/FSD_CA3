@@ -7,6 +7,31 @@ export default class Navbar extends Component {
     return (
       <div id="navbarTop">
         <div className="login_regester_container">
+        {
+          localStorage.accessLevel > ACCESS_LEVEL_GUEST ? 
+          <Link className="red-button" to={"/Logout"}>
+            Logout
+          </Link>
+          :
+          null
+        }
+        {
+          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
+          <Link className="green-button" to={"/Login"}>
+            Login
+          </Link>
+          :
+          null
+        }
+        {
+          localStorage.accessLevel <= ACCESS_LEVEL_GUEST ? 
+          <Link className="blue-button" to={"/Register"}>
+            Register
+          </Link>
+          :
+          null
+        }
+          <br />
         </div>
 
         <div id="navbarBottom">
@@ -42,12 +67,15 @@ export default class Navbar extends Component {
                 <i class=" fa-sharp fa-solid fa-hammer"></i>
                 <Link className="blue-button" to={"/DisplayAdminTable"}>Admin</Link>
 
-
                 </li>
+                :
+                null
+                }
                 <li>
 
-                  <input class="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
                   <button className="searchbutton" type="submit">Search</button>
+                  <input className="searchfrom" type="search" placeholder="Search" aria-label="Search" onChange={this.props.searchArray}></input>
+
                 </li>
                 <li>
          

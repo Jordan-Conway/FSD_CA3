@@ -428,6 +428,7 @@ form {
 		justify-content: space-around;
 	}
 
+
 .userProfile {
 	div {
 		text-align: center;
@@ -937,3 +938,32 @@ form {
 		height: 200px;
 	}
 }
+    }
+  
+  
+  @media screen and (max-width: 1050px) {
+    .sidenav{
+  display:none;
+    }
+  }
+  }
+
+  .userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    div{
+      text-align: center;
+      margin: 1%;
+      border-radius: 10px;
+      border: 2px solid black;
+      flex-grow: 1;
+
+      img{
+        max-width: 40%;
+        max-height: 40%;
+      }
+    }
+  }
+
