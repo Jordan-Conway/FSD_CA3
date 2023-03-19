@@ -20,6 +20,7 @@ export default class ShoppingCart extends Component{
 
     handleBuy = e => {
         const purchaseObject = {
+            userId: localStorage.getItem('id'),
             purchaseDate: new Date(),
             purchaseStatus: 'paid',
             items: this.state.items
