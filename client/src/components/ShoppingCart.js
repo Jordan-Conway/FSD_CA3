@@ -68,7 +68,7 @@ export default class ShoppingCart extends Component{
                 <div className="Shopping_Cart">
                     
               
-                <h3>Your Shopping Cart</h3><CarPartBody isAddable={false} cars={this.state.items} /> 
+                <h3>Your Shopping Cart</h3>
                 <button onClick={this.handleBuy}>Purchase</button>
                 {
                     this.state.items !== null ? 
@@ -76,7 +76,8 @@ export default class ShoppingCart extends Component{
                     :
                     null
                 }
-            </>
+                </div>
+            </>  
         )
     }
 }
