@@ -80,6 +80,7 @@ export default class DisplayAllCars extends Component {
     }
     render() {
         return (
+            <div className="adminpage">
             <div className="navbarBottom">
                 <Navbar Navbar={this.state.Navbar} cars={this.state.carParts} />
                 <div className="main-body">
@@ -96,6 +97,7 @@ export default class DisplayAllCars extends Component {
                         <CarPartBody cars={this.state.carParts} />
                     </div>
                 </div>
+            </div>
             </div>
         
         )

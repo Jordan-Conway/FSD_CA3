@@ -21,7 +21,6 @@ export default class AddCarPart extends Component {
             colour: "",
             price: "",
             condition: "",
-            redirectToDisplayAdminTable: false,
             quantity: "",
             redirectToDisplayAllCars: false
         }
@@ -61,7 +60,7 @@ export default class AddCarPart extends Component {
                     }
                     else {
                         console.log("Record added")
-                        this.setState({ redirectToDisplayAdminTable: true })
+                        this.setState({ redirectToDisplayAllCars: true })
                     }
                 }
                 else {
@@ -76,7 +75,7 @@ export default class AddCarPart extends Component {
             <div className="navbarBottom">
             <Navbar Navbar={this.state.Navbar} /> 
             
-                {this.state.redirectToDisplayAdminTable ? <Redirect to="/DisplayAdminTable" /> : null}
+                {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAdminTable" /> : null}
                 <div className="addFrom">
                 <Form>
                     <Form.Group controlId="name">
@@ -115,7 +114,7 @@ export default class AddCarPart extends Component {
                     </Form.Group>
                     <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
 
-                    <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
+                    <Link className="red-button" to={"/DisplayAllCars"}>Cancel</Link>
                 </Form>
             </div>
         </div>

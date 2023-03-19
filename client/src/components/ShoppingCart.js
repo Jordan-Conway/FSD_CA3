@@ -63,8 +63,13 @@ export default class ShoppingCart extends Component{
                 <div className="navbarBottom">
                 <Navbar/>
                 </div>
+              
+                <div className="Shopping_Cart">
+                    
+              
+                <h3>Your Shopping Cart</h3><CarPartBody isAddable={false} cars={this.state.items} /> 
                 <button onClick={this.handleBuy}>Purchase</button>
-                <CarPartBody isAddable={false} cars={this.state.items} /> 
+                </div>
             </>
         )
     }

@@ -129,13 +129,13 @@ export default class EditCarPart extends Component {
                         <Form.Label>Condition</Form.Label>
                         <Form.Control type="text" name="condition" value={this.state.condition} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
+                    
 
                     <Form.Group controlId="quantity">
                         <Form.Label>Quantity</Form.Label>
                         <Form.Control type="text" name="quantity" value={this.state.quantity} onChange={this.handleChange} />
                     </Form.Group>
-                    <LinkInClass value="Add" className="add-button" onClick={this.handleSubmit} />
+                    <LinkInClass value="Confirm Edit" className="add-button" onClick={this.handleSubmit} />
 
                     <Link className="red-button" to={"/DisplayAdminTable"}>Cancel</Link>
                 </Form>
