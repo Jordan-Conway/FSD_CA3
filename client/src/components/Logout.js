@@ -35,7 +35,7 @@ export default class Logout extends Component
                 { 
                     console.log("User logged out")
                     localStorage.clear()
-                    localStorage.accessLevel =  ACCESS_LEVEL_GUEST
+                    localStorage.accessLevel = ACCESS_LEVEL_GUEST
                     
                     this.setState({isLoggedIn:false}) 
                 }
