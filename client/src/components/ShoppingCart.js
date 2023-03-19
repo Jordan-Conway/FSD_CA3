@@ -65,7 +65,13 @@ export default class ShoppingCart extends Component{
                 <Navbar/>
                 </div>
                 <button onClick={this.handleBuy}>Purchase</button>
-                <CarPartBody isAddable={false} cars={this.state.items} /> 
+                {
+                    this.state.items !== null ? 
+                    <CarPartBody isAddable={false} cars={this.state.items} /> 
+                    :
+                    null
+                }
+                
             </>
         )
     }
